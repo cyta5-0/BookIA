@@ -1,0 +1,1198 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{authblk}
+\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+% Set the font (output) encodings
+\usepackage[T1]{fontenc}
+
+% \usepackage[utf8]{inputenc} is no longer required (since 2018)
+
+% Spanish-specific commands
+\usepackage[spanish]{babel}
+% Paquete para referencias en formato APA
+\usepackage[style=apa,sorting=nyt]{biblatex}
+\addbibresource{references.bib} % Archivo .bib con las referencias
+
+\pagestyle{plain} 
+\title{Derechos y desafíos de la Inteligencia Artificial
+}
+\author{
+Derechos y desafíos de la Inteligencia Artificial
+ $^{1}$ \\
+\small $^1$ Faultad de Derecho, Universidad de Buenos Aires, Argentina \\
+\small ORCID: \texttt{0000-0000-0000-0000} \\
+\small \texttt{cyta@cyta.ar} 
+}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\chapter{Introducción}
+En este trabajo se pretende exponer, de forma sintética y clara, las nuevas situaciones sociales que se proyectan para un futuro cercano y el vacío legal que existe a nivel mundial respecto al creciente fenómeno de la inteligencia artificial. Para esto, intentaremos exhibir lo variado y amplio del desarrollo tecnológico y sus diferentes problemáticas, con la intención de concientizar y, de alguna manera, asistir a aquellos que deben crear las leyes acordes.
+
+\section{Qué es natural y qué es artificial}
+Esta distinción es una de las bases para poder comprender a que nos estamos refiriendo cuando hablamos de inteligencia artificial. En este sentido, lo primero es dilucidar de manera inequívoca qué es natural y qué artificial.
+
+El concepto de "natural" podemos verlo adaptado a varios contextos. Pudiendo ser adecuado a la forma de actuar, el lugar de nacimiento o pertenencia de una persona o animal, entre otras variantes de su uso. Pero la definición que nos interesa es la más general, la cual nos señalará como natural a algo que perteneciente o relativo a la naturaleza, o conforme a la cualidad o propiedad de las cosas. Pudiendo interpretarse como, algo fijo o determinado por la naturaleza; relativas a la constitución de una cosa; perteneciente al carácter nativo; de acuerdo a la naturaleza.
+
+El inconveniente surge al hablar de "artificial". El mismo término parecería que nos remite a algo que carece de valor. Donde el propio Diccionario de la Real Academia Española, define como artificial a "algo hecho por mano o arte del hombre", pero también, en una segunda enunciación lo señala como "No natural, falso".
+
+Esto plantea dos cuestiones destacables. La primera es la inevitable asociación que provoca la definición, dándole un carácter que podría interpretarse como negativo y sumergirnos en un debate interpretativo amplio. En tanto, la segunda cuestión es más amplia y rica en su pensamiento, preguntándonos si realmente "la mano del hombre" al intervenir en la naturaleza vuelve las cosas en artificiales. Parece innegable señalar que la construcción de una casa es algo artificial pero, es realmente lógico pensar que, el panal que hacen las abejas con celdillas de cera para contener sus larvas y acoplar miel o por su parte, los nidos que hacen los pájaros donde ponen sus huevos y crían sus pichones, entre otros "animales arquitectos", son diferentes a la mano del hombre.
+
+El ser humano es un animal como cualquier otro interactuando con su medio. Por lo tanto, no vamos a cuestionar, aunque tendríamos herramientas, el concepto de "artificial", pero si intentaremos quitarle la visión negativa y considerar a lo artificial como parte de lo "natural".
+
+Los desarrollos del hombre nacen en base a prueba y error, siendo parte de la humanidad como ser pensante. De esta manera, resulta entendible que algunos inventos puedan no hacerle bien a la naturaleza, a diferencia de los animales que instintivamente producen su alimento o crean sus refugios con un mínimo o nulo impacto en el medio ambiente. Pero las creaciones del ser humano son, indudablemente, parte de la misma naturaleza.\cite{ChatGPT2025}
+
+
+\chapter{Primeros conceptos de inteligencia artificial}
+La inteligencia artificial (IA) es una de las ramas de la Informática, con fuertes raíces en otras áreas como la lógica y las ciencias cognitivas. La misma, como primera noción, podemos definirla como un conjunto de técnicas que tienen por objeto dotar a un sistema informático de la capacidad de simular algunas características que se suponen propias de la inteligencia humana.
+
+Esto podemos fácilmente relacionarlo a aquellos supuestos donde una máquina imita las funciones "cognitivas" que los seres humanos asocian con otras mentes humanas, como por ejemplo: "aprender" y "resolver problemas".
+
+Este término fue acuñado en 1956 por John McCarthy, del Instituto de Tecnología de Massachusetts (MIT). En ese año se celebró la conferencia de Dartmouth, en Hanover (Estados Unidos). En ella, McCarthy, Marvin Minsky, Nathaniel Rochester y Claude Shannon establecieron las bases de la inteligencia artificial como un campo independiente dentro de la informática. Aunque, previamente en 1950, Alan Turing había publicado un artículo en la revista Mind, titulado "Computing Machinery and Intelligence", o de su traducción "Ordenador e inteligencia". En él reflexionaba sobre el concepto de inteligencia artificial y establecía lo que luego se conocería como el test de Turing, una prueba que permite determinar si una computadora se comporta conforme a lo que se entiende como artificialmente inteligente, que después veremos con más detalle.
+
+Desde aquella conferencia en los años 50 hasta la actualidad han pasado varios sucesos, innumerables descubrimientos importantes han marcado un camino, con muchas fallas y aciertos por parte de los desarrolladores encargados de investigar estas ciencias. Pero podemos señalar como la primera gran demostración de la existencia de inteligencia artificial para el ciudadano común el 3 de mayo de 1997. En aquel entonces, se produjo la partida de ajedrez más emocionante de la historia. Gary Kasparov, campeón mundial por más de una década, se enfrentó con Deep Blue, la supercomputadora de IBM capaz de calcular 200 millones de posiciones y movimientos por segundo. De los seis juegos, Deep Blue ganó tres, Kasparov dos y uno terminó en tablas. Después de muchos años de intentos fallidos, una máquina por fin había sido capaz de doblegar la mente de uno de los hombres más brillantes del siglo. La lejana leyenda de ciencia ficción, en la que el ser humano creaba una máquina capaz de vencerlo, ya era realidad.
+
+Después de este evento, el entusiasmo surgió nuevamente sobre las posibilidades que nos brindaban estas tecnologías, otorgándonos mucho más que un partido de ajedrez, sino la perspectiva de crecimiento sin límites en la materia.
+
+
+\chapter{Tipos de inteligencia artificial en base a su comportamiento}
+La obra "Inteligencia Artificial: Un Enfoque Moderno", creada por Stuart Russell y Peter Norvig, es el libro más popular referente a esta materia.El mismo, para una mejor comprensión, distingue cuatro tipos de inteligencia artificial según sus características.
+
+Sistemas que piensan racionalmente: Sistemas expertos;
+Sistemas que piensan como humanos: Redes neuronales;
+Sistemas que actúan racionalmente: Agentes inteligentes; y
+Sistemas que actúan como humanos: Robótica.
+Donde recorreremos, a lo largo de este capítulo, los detalles del funcionamiento de los diversos sistemas, con sus diferentes ventajas.
+\section{Sistemas que piensan racionalmente: sistemas expertos}
+Los sistemas que piensan racionalmente son aquellos que buscan emular el pensamiento lógico racional del ser humano para otorgarle la capacidad de percibir, razonar y actuar como estos. La definición se focaliza en el razonamiento, pero partiendo de la premisa de que existe una forma racional de razonar. La lógica permite la formalización del razonamiento y se utiliza para este objetivo.
+
+Los principales exponentes de este tipo de inteligencia son los denominados "Sistemas expertos". Se trata de programas informáticos que permiten aplicar el proceso de razonamiento de un ser humano experto en una materia para la resolución de problemas específicos con el fin último de tomar decisiones ponderadas en base al conocimiento. Su función es realizar trabajos similares a los que desarrollaría un especialista en un área determinada, sin sustituir a los expertos, sino que apoyándolos en un "dominio" de aplicación específico.
+
+En otras palabras, podemos decir que, se trata de un software encargado de capturar el saber de una o varias personas muy experimentadas en una materia, e imitar sus procesos de razonamiento cuando soluciona las dificultades de un determinado dominio.
+
+Los sistemas expertos, tienen la capacidad de poder resolver problemas complejos de igual o mejor forma que los seres humanos. Esto se debe a que razonan heurísticamente (o sea, simplifican el problema, para buscar una solución rápida), usando reglas empíricas efectivas, e interactúan con los humanos de forma adecuada, incluyendo el lenguaje natural. Consiguiendo contemplar múltiples hipótesis en competición simultánea, pudiendo justificar sus conclusiones.
+
+Estos sistemas se hallan integrados por tres elementos básicos:
+
+La "Base de Conocimientos", que funciona como depósito estructurado de toda su información. Ésta se desglosa en conocimiento descriptivo (información sobre hechos, situaciones, datos, normas, sentencias, doctrinas, entre otros posibles elementos) y conocimiento procedimental (integrado por reglas de producción heurística del tipo de: "si... entonces");
+El "Motor de Inferencia", que es un software encargado de la correcta aplicación de las reglas de inferencia en las deducciones automáticas. Controla cuándo y cómo se debe aplicar la información contenida en la base de conocimientos para responder a los problemas planteados;
+La "Interfaz", que permite el enlace y la comunicación con el usuario o el ingeniero del conocimiento.
+Siendo, la forma de medida del desarrollo de dicho sistema, no la cantidad de instrucciones o programas sino, la cantidad de reglas que hay contenida en su Base de Conocimientos.
+
+El proceso de desarrollo de un sistema experto requiere, primero la elección del área de interés. Pudiendo optar, por ejemplo, para graficar este caso, el ámbito del derecho en donde tenemos los sistemas expertos legales. Una vez hecho esto, se seleccionan el o los especialistas en la materia, como lo sería en materia legal un juez, un abogado, etc. De esta manera, los especialistas que cuentan con un dominio específico brindarán conocimientos sobre ese terreno, eligiendo, por ejemplo, temas de derecho informático, comercial, laboral, penal, entre otros.
+
+Una vez seleccionado a los expertos y estos estén de acuerdo en dar sus conocimientos, comienza a jugar su papel el ingeniero de conocimientos. Él se encargará de extraer el saber de los especialistas y darle una forma de representación a los conocimientos, optando por las más convenientes entre: las reglas de producción, las redes semánticas y los marcos o frames, conformando así la Base de Conocimientos del sistema experto.
+
+La forma de representación más empleada son las reglas de producción, las que podemos representar de la siguiente manera:
+
+SI "premisa" ENTONCES "Conclusión" (SI A ENTONCES B).
+
+Donde si las premisas están formadas por más de un hecho, podrá conectarse por "Y" o por "O", como así también cuando la conclusión pueda estar representada por más de un hecho:
+
+SI hecho1 Y/O hecho2 Y/O… hechoN ENTONCES hecho1 Y/O hecho2 Y/O… hechoN
+
+Los hechos son afirmaciones que sirven para representar conceptos, datos, objetos, etc. Y el conjunto de hechos que describen el problema es la base de hechos. Ejemplo de hechos:
+
+Juan es un estudiante
+
+Juan tiene 10 años
+
+Una regla es una combinación de hechos que permite representar conocimientos y sacar inferencias de los mismos. Ejemplo de reglas:
+
+R1: SI Juan es estudiante Y Juan tiene 10 años Entonces Juan estudia en la primaria.
+
+Vemos que, partiendo de hechos conocidos que describen algún conocimiento se pueden inferir nuevos hechos, que representan nuevos conocimientos. Estos no tienen que ser totalmente ciertos, pero debe tener un nivel porcentual elevado de acierto para poder tomarlo considerablemente posible de que sea así.
+
+Por ejemplo, Juan puede ser que no esté en primaria por haber avanzado muchos grados por su gran capacidad intelectual y encontrarse en la secundaria, pero porcentualmente las posibilidades que el resultado sea el indicado por el sistema es muy alto.
+
+Para concluir, vemos que los sistemas expertos tienen varias ventajas y desventajas. Los beneficios que brinda este tipo de inteligencia artificial, es la posibilidad de conseguir la supervivencia del conocimiento y que no muera con el fallecimiento del ser humano experto. Además, nos brinda la posibilidad de mejorar la calidad del conocimiento de los especialistas humanos y multiplicar el número de expertos, debido a que hace más accesible el conocimiento existente. Sumado a que, el hecho de poder trabajar con gran cantidad de información, asistiendo de esta manera a las personas que, a pesar de tener amplios conocimientos en la materia, no pueden tener presente los grandes volúmenes de información existente y actualizada, pudiendo afectar negativamente en la solución de problemas. Además, hoy en día, los sistemas expertos son capaces de trabajar a velocidades muy elevadas.
+
+En tanto, entre sus desventajas, están los altos costos y tiempo de programación que representan el dejar el sistema a punto. La baja tolerancia a fallas, debido a que la información esta concentrada y una falla en el sistema puede acarrear un mal funcionamiento general. Además, para actualizar un sistema experto es necesario reprogramarlo. Por otro lado, la inteligencia artificial no ha conseguido desarrollar sistemas que sean capaces de resolver problemas de manera general, de aplicar el sentido común para resolver situaciones complejas ni de controlar situaciones ambiguas.
+
+
+\section{Sistemas que piensan como humanos: redes neuronales}
+
+Los "sistemas que piensan como humanos", son los que imitan el pensamiento humano; para conseguir la automatización de actividades vinculadas al proceso de toma de decisiones, resolución de problemas y aprendizaje. Aquí tenemos como exponente principal las "redes neuronales artificiales".
+
+Las redes neuronales artificiales, son la rama de la inteligencia artificial más desarrollada y más prometedora en su evolucionando a lo largo de los años. El concepto de este tipo de redes no es nuevo, pero su gran necesidad de procesamiento provocó que se mantuviera con un crecimiento irregular durante muchos años. Pero la creación de nuevas tecnologías con capacidades de procesamiento más altas a las que venían existiendo, indujeron que estos sistemas vuelvan a tener lugar y demostrar muy buenos resultados en diferentes escenarios.
+
+Las redes neuronales artificiales, no podemos definirlas de forma exacta, pero si podemos describirlas como una técnica de procesamiento masivo y paralelo de la información que emula las características esenciales de la estructura neuronal del cerebro biológico.
+
+La clave del funcionamiento se basa, como todo en tecnología, en algoritmos, que especificaremos como un conjunto finito de instrucciones o pasos que sirven para ejecutar una tarea o resolver un problema.
+
+Su funcionamiento, parte de la simple comparativa del procesamiento de información de una computadora y el cerebro de una persona.
+
+Una computadora, es un sistema con una estructura compuesta por hardware y software.
+
+Comenzando con la composición física, vemos que el hardware tiene como "elemento de cálculo" más pequeño los transistores. Tratándose de dispositivos electrónicos diminutos, que se emplean para entregar una señal de salida variable en respuesta a la señal de entrada. En un procesador, en la actualidad podemos encontrar millones de estos transistores. Es así que, los procesadores, son un grupo de estos dispositivos semiconductores unidos de diferentes formas  para que, combinadas sus distintas entradas y salidas, con una interconexión preestablecida al momento de su fabricación, nos permitan realizar diversos tipos de operaciones.
+
+Para completar este sistema, tenemos el software, donde la programación tendrá un rol igual de importante, en la cual una persona le otorga diferentes algoritmos o instrucciones a la máquina señalando en que orden el procesador debe realizar esas operaciones, que procesadas nos permitirá lograr la respuesta o resultado.
+
+Estos resultados, en cierta medida son predeterminados, dado que, si bien no sabemos la respuesta antes del proceso, el camino que recorre el software es el que estaba preestablecido por nosotros y por lo tanto, podemos decir que, una persona puede replicar su forma de razonar en la computadora mediante esas órdenes.
+
+Respecto al cerebro, este tiene en su estructura, como "elemento de cálculo" más pequeño las neuronas. Ellas son células nerviosas, que constan de un cuerpo de forma variable provisto de diversas prolongaciones, una de las cuales, de aspecto filiforme y más larga que las demás, es el axón o neurita. Las neuronas se encuentran interconectadas entre ellas y se comunican mutuamente gracias a que producen impulsos nerviosos que transmiten información. Cada situación que se presente, provocará en nuestro cerebro, no solo la activación de las neuronas, sino que cambiará la manera de conexión, la cantidad de uniones y el sentido de envío y recepción de la información según los datos que deba procesar.
+
+Al comparar ambas estructuras podemos notar que, el sistema de redes neuronales artificiales, busca imitar la flexibilidad del cerebro, haciendo un trabajo que resulta imposible para los procesadores normales. Logrando, a diferencia de una computadora, a nivel de hardware, recablar su estructura física para adaptarla al problema que desea solucionar y a nivel de software pudiendo diferenciar entre "programación" y "aprendizaje".
+
+La composición de las redes neuronales artificiales, en la actualidad, se forma por una colmena de servidores, que se encuentran en un centro de datos cuidados y que manejan grandes niveles de información. Dicho contenido, no estará limitado a lo preestablecido por lo que el programador o grupo de trabajo realizaron en su desarrollo, sino que, al ser aprendido por el mismo sistema, trascenderá los límites de conocimiento que le podrían dar aquellos.
+
+La arquitectura básica de la de redes neuronales, están organizadas en tres capas de neuronas, las cuales, sin entrar en detalles técnicos y la complejidad del sistema, vemos que son:
+
+La capa de neuronas de entrada, que recibe la información del exterior del sistema;
+La capa de neuronas intermedias u ocultas, que procesan la información;
+La capa de neuronas de salida, que proporciona al exterior el resultado del proceso.
+Arquitectura de una red de neuronas
+Arquitectura de una red de neuronas
+El sistema de aprendizaje empleado, puede ser el de machine learning o deep learning, conceptos que abordaremos más adelante.
+
+Esta inteligencia artificial tiene muchas ventajas, entre las que destacamos: la capacidad de aprendizaje sin necesidad de cargar innumerable cantidad de datos, además de la velocidad de respuesta y la confiabilidad del sistema. La gran confiabilidad basada en la alta tolerancia a fallas se produce debido a que el conocimiento está repartido entre multitud de neuronas a lo ancho de toda la red, pudiendo funcionar aunque se produzcan errores en alguna de sus neuronas o el conocimiento sea incompleto o incierto.
+
+La principal desventaja, es uno de los puntos más cuestionados e inquietantes, según los especialistas en inteligencia artificial y las personalidades más destacadas de la ciencia y la tecnológica. Se trata de que, no hay manera de explicar la toma de decisiones que realiza el sistema. Esto se debe a que, no es posible determinar la actividad que se producen en las capas neuronales intermedias o capas ocultas, siendo lo que denominamos como una "caja negra". Planteando quienes trabajan con estas redes que es un misterio la manera en que llega a la conclusión expresada en la salida.
+
+Por último, este tipo de sistemas que piensan como los seres humanos, estamos obligados a distinguirlos de los sistemas que piensan racionalmente, o sea con los sistemas expertos. El punto más destacado es que las redes neuronales "aprenden" sin necesidad de la intervención de un especialista, sino sobre los casos reales que integran la experiencia de un gran número de expertos. Es así que, las redes neuronales pueden aprender a reconocer patrones, en tanto los sistemas expertos no pueden aprender por si mismos. Otras de las diferencias es la mayor resistencia a fallos de las redes neuronales por la distribución de su información. Mientras que el punto positivo más fuerte de los sistemas expertos por sobre las redes neuronales es la posibilidad de explicar la decisión tomada por el sistema, dado que los científicos no pueden explicar, por qué hace lo que hace.
+
+\section{Sistemas que actúan racionalmente: agentes inteligentes
+}
+Denominamos como "sistemas que actúan racionalmente" a todos aquellos que tienen como finalidad, emular de forma racional el comportamiento humano para poder darle conductas inteligentes a diversos artefactos.
+
+En este contexto, nos referirnos a los "agentes inteligentes". Siendo estos, sistemas basado en hardware o software, capaces de percibir su entorno e interactuar con este por medio de la implementación de diferentes actuadores.
+
+Es así que, se trata de un programa especialmente creado para realizar ciertas tareas de manera autónoma, en una red, por encargo de un usuario. Teniendo como finalidad permitirle ganar tiempo en la vigilancia y recolección de información de interés de quien lo manipula.
+
+Esta clase de inteligencia artificial puede razonar y aprende a partir de la información que recoge, permitiéndole operar en todo momento, ya sea controlado por una persona, por otro agente o autonomamente incluso cuando el usuario se encuentre desconectado. Recolectando datos para finalmente informar o aplicar los parámetros otorgados por el usuario.
+
+Los agentes inteligentes se caracterizan por tener:
+
+Autonomía: operan sin la intervención directa de los seres humanos y tienen control sobre sus acciones y estado interno;
+Sociabilidad: pueden interactuar con otros agentes o con seres humanos a través de algún tipo de idioma o lenguaje de comunicación;
+Reactividad: los agentes perciben su entorno y deben responder de manera oportuna a los cambios que ocurren en él. Cambiando su percepción por variaciones en el mundo físico, la intervención de un usuario, otros agentes, Internet o la combinación de estos factores;
+Proactividad: los agentes no solo deben actuar en función de su entorno, sino que también deben ser capaces de mostrar un comportamiento dirigido a un objetivo tomando la iniciativa.
+El comportamiento de un agente se representa en forma de una tabla, la cual tomará en cuenta la secuencia de percepciones y determinará qué acción se lleva a cabo como respuesta a cada estimulo adquirido, teniendo como punto de referencia su historial de conocimientos. Estos se mueven dentro de un entorno "virtual" operando a través de un sistema, por lo que, dentro del entorno de software tendrán una función análoga que representaría a la que realizan los robots en el mundo real, de ahí el nombre de softbots o software robot.
+
+Respecto al control del entorno, vemos que el agente inteligente puede encontrarse en un entorno estático o dinámico. Siendo en el escenario variable en el que el control del entorno será solo parcial, por lo tanto, una misma acción realizada en diferentes ocasiones puede tener efectos distintos.
+
+Los agentes inteligentes los podemos distinguir positivamente con respecto a los sistemas expertos, anteriormente vistos, en que aquellos no suelen interactuar directamente con el entorno, normalmente están diseñados para tareas más complejas donde ellos tienen todo el control de las decisiones para ese dominio y no suelen cooperar entre si.
+
+Además de los beneficios de facilitarles el trabajo a los usuarios, pueden actuar como consultantes y servir de operadores en medios complejos.
+
+En tanto, como contrapartida, podemos encontrarnos con dificultades como la imposibilidad de conocer la información relevante o irrelevante, la complejidad de agilizar la búsqueda, los inconvenientes que se presentan para evitar repetir una tarea realizada y adaptarse a diferentes protocolos, formatos y sistemas de acceso a la información.
+
+Es así que, para concluir, podemos decir que antiguamente los agentes inteligentes eran muy utilizados, su funcionamiento se podría ver en varios motores de búsqueda web para la recuperación de información de Internet o en servicios de soporte online o chat. Actualmente, su uso es mucho menor, ya los desarrollos de inteligencia artificial tienden a concentrar las diferentes soluciones utilizando la tecnología de redes neuronales y el empleo de los diversos modelos de aprendizaje, provocando un desplazado gradual en los distintos rubros de este tipo de sistemas.
+
+\section{Sistemas que actúan como humanos: robótica}
+Los sistemas que actúan como humanos, podemos distinguirlos como aquellos que, tratan de desenvolverse en un contexto como personas físicas; imitan su comportamiento con el objetivo de que puedan realizar tareas que hacen los humanos. Es decir, en otras palabras, que busca ejecutar labores que actualmente hacen las personas, pero no cualquier actividad, sino aquellas que para llevarse a cabo se necesita de inteligencia. Aquí tenemos como ejemplo la "robótica".
+
+La robótica, es la técnica que aplica la informática al diseño y empleo de aparatos que, en sustitución de personas, realizan operaciones o trabajos, por lo general en instalaciones industriales.
+
+La plataforma de la robótica, son obviamente los robots. Este termino surgió en la década de 1920 en la obra de teatro de ciencia ficción R.U.R. (Robots Universales Rossum), escrita por el checo Karel Čapek. En un contexto del mundo totalmente diferente y una concepción distinta a la nuestra, nace el vocablo, a partir de la palabra checa robota, que significa trabajo.
+
+De esta forma, definimos un "robot" como el producto de la robótica, siendo la máquina o ingenio electrónico programable, capaz de manipular objetos y realizar operaciones antes reservadas solo a las personas. Así, logramos entender que los robots son esas creaciones humanas que apoyan a estos en trabajos difíciles. Entonces empezamos a llegar a la frontera con otros términos como cobots y androides, además de los cyborgs.
+
+Los "cobots" son una subcategoría de robots colaborativos, caracterizados por interactuar físicamente con los seres humanos. Su utilización apunta a la sustitución de personas en tareas repetitivas que no requieren ningún tipo de creatividad como lo es el manejo de materiales o el empaquetado de productos. Esta categoría de robots se distinguen por ser pequeños, ligeros y de movimiento lento, con una inteligencia artificial que sigue como primera ley que si un ser humano se acerca demasiado, debe apagarse.
+
+En tanto, un "androide" es un autómata con figura de hombre. Este es una especie de robot antropomorfo, que se caracteriza por asemejarse en su aspecto a lo humano y por imitar conductas humanas. Dicho concepto considerado en sentido no restrictivo, podemos ampliarlo también a los robots zoomórficos, siendo también androides los sistemas de locomoción que imitan a los diversos seres vivos.
+
+La ultima distinción que tenemos que tener en cuenta, es la de "cyborg". Los científicos Manfred Clynes y Nathan Kline, crearon este término pensando en una combinación hombre-máquina que pueda adaptarse a vivir en entornos extraterrestres. Pero esta idea, con el paso del tiempo fue adaptándose, aunque mantiene su esencia. Pudiendo decirse que, un cyborg es un hombre con las funciones corporales alteradas, teniendo una parte orgánica humana que se encuentra transformada externamente por medicamentos o dispositivos de regulación para poder subsistir en un ambiente diferente al normal y mejorar sus capacidades.
+
+Una vez realizada las distinciones, nos concentraremos en nuestro objeto de estudio. Siendo la robótica, en sus distintas formas, uno de los principales medios de interacción de la inteligencia artificial con el entorno, ya sea que tenga una forma mecánica, aspecto humano o asista permanentemente a una persona.
+
+Dado que hoy en día, el termino robot es ambiguo, es necesario aclarar que en este caso hablamos de un sistema electromecánico que normalmente es conducido por un programa de una computadora o por un circuito eléctrico. En tanto, existe el término "bot", proveniente de "robot", empleado para hablar de programas informáticos que efectúa automáticamente tareas repetitivas, cuya realización por parte de una persona sería imposible o muy tediosa. Este último elemento, no es un módulo de la robótica, más allá de su denominación y origen, sino que puede llegar a tratarse de otro tipo de inteligencia artificial, dado que bot alude a los sistemas virtuales de software, mientras que los robots sería el conjunto tanto físico como virtual.
+
+Existe una gran variedad de robots, pero no todos poseen inteligencia artificial. Aquellos que no tienen esta característica, debemos distinguirlos para poder establecer que será objeto de nuestro estudio y de regulación legal. Para esto, empleamos la clasificación de la Asociación de Robots Japonesa (JARA), que los separó en seis clases sobre la base de su nivel de inteligencia:
+
+Dispositivos de manejo manual: controlados por una persona;
+Robots de secuencia arreglada: en los cuales se programa una secuencia que permanece invariable hasta que se reprograme completamente;
+Robots de secuencia variable: son aquellos donde un operador puede modificar la secuencia fácilmente;
+Robots regeneradores: se distinguen en que el operador humano es el encargado de conducir al robot en el cumplimiento de la tarea a realizar;
+Robots de control numérico: en este caso, el operador alimenta la programación del movimiento, hasta que se enseñe manualmente la tarea;
+Robots inteligentes: los cuales pueden entender e interactuar de forma adaptativa, comportándose de manera diferente según los diversos cambios que percibe en el medio ambiente en el que se desempeña.
+Siendo rescatados para la realización de nuestro estudio, en esta distinción, únicamente los denominados "robots inteligentes".
+
+Por otro lado, el español Javier Antonio Nisa Ávila, especialista en Derecho de Tecnologías avanzadas e Inteligencia Artificial, realiza una distinción de cuatro niveles de robots inteligentes. La cual, considerando que proviene de un especialista en leyes, nos dará facilidades para organizar y proyectar la legislación existente y los temas que requieren ser solucionados. Los niveles son:
+
+Nivel 1, Sistemas inteligentes programados: Tanto en Japón en su "Robot Strategy" como en la Unión Europea, en el proyecto "Regulating Robotics: A Challenge For Europe", son definidos como máquinas que llevan integrados sistemas robóticos que ayudan a sus operadores o dueños a realizar tareas automatizadas, pero que no son en sí mismo robots por resultar nada más que un pequeño sistema robótico integrado dentro de otro no robótico donde predomina este último. Por ejemplo, los vehículos de conducción autónoma;
+Nivel 2, Robots no autónomo: según la "Korean law on the development and distribution of intelligent robots" de Corea del Sur, son aquellos que en su totalidad a nivel de construcción industrial son robots y se dedican a realizar tareas programadas simples sin necesidad de asistencia humana, y que con mayor o menor medida son capaces de tomar decisiones mecánicas vinculadas exclusivamente a su tarea ante imprevistos o situaciones de contingencia. Como lo son la robótica sanitaria, asistencia en el hogar, limpieza automática en el hogar, entre otros casos;
+Nivel 3, Robots autónomos: según la "Korean law on the development and distribution of intelligent robots" de Corea del Sur y la "Robot Strategy" de Japón, podemos clasificar así a los que tienen capacidad de desarrollar tareas encomendadas complejas, listando las mismas, priorizando y tomando o creando sus propias decisiones con libertad dentro de su ámbito de trabajo, en base a unos objetivos encomendados sin necesidad de asistencia humana, con suficiente autonomía para que en base a una orden dada por un operador humano realizar las tareas según lo considere más adecuado o efectivo para el cumplimiento de dicho objetivo, y teniendo siempre como base última la protección de productos o maquinarias y de usuarios o humanos como primer objetivo subyacente. Siendo ejemplo de estos aquellos sistemas de diseño industrial autónomo, de navegación aéreo automatizado, ferroviario;
+Nivel 4, Inteligencia Artificial: según la "Korean law on the development and distribution of intelligent robots" de Corea del Sur y la "Robot Strategy" de Japón, son los sistemas mecánicos que perciben el ambiente externo por sí mismo sin necesidad de órdenes preprogramadas externas, con capacidad para discernir diferentes circunstancias que acontezcan a su alrededor y con capacidad para moverse de forma voluntaria. Asimismo, los sistemas de inteligencia artificial deben de obedecer tanto órdenes de otros sistemas como las humanas que interaccionan con él.
+Esta diferenciación, resulta muy clara y acertada para distinguir los distintos tipos de robots inteligentes. Aunque parece inexacto destinar el nombre "Inteligencia artificial" solo para el nivel 4, ya que, como advertimos en la definición general y como resultará evidente en el transcurso de las hojas, el concepto es más amplio.
+
+Por ultimo, distinguimos que, en la actualidad, los robots comerciales e industriales se utilizan ampliamente y realizan tareas de forma más precisa y más económica que los humanos. También se emplean en trabajos demasiado sucios, peligrosos o tediosos para las personas. Los robots se usan en plantas de manufactura, montaje y embalaje, en transporte, en exploraciones en la Tierra y en el espacio, cirugía, armamento, investigación en laboratorios y en la producción en masa de bienes industriales o de consumo.
+
+Otras aplicaciones incluyen la limpieza de residuos tóxicos, minería, búsqueda y rescate de personas y localización de minas terrestres.
+
+Siendo algunos de los usos más destacados, los referentes a la medicina y usos militares. Sobresaliendo el cuidado de personas con discapacidades y ancianos.
+
+
+
+\chapter{Clasificación de inteligencia artificial según su desarrollo}
+La inteligencia artificial puede clasificarse en tres tipos, según su nivel de desarrollo, donde se incrementarán las capacidades del sistema variando en cada una de ellas. Las etapas son: inteligencia artificial débil o estrecha, inteligencia artificial fuerte o general y súper inteligencia artificial. Las cuales serán estudiadas tomando como punto de referencia las tecnologías que actualmente presentan una mayor evolución. Por este motivo, nos basamos en las redes neuronales, para demostrar su desarrollo. Conceptos que iremos explicando de forma detallada a lo largo del presente capítulo.
+
+\section{Inteligencia artificial débil o estrecha}
+De su traducción Artificial Narrow Intelligence (ANI), la inteligencia artificial débil o estrecha es aquella que, mediante pequeñas redes neuronales, busca la resolución de problemas concretos sin la intención de mostrar inteligencia humana en general, por lo tanto abarca un campo reducido o estrecho.
+
+Su funcionamiento se basa en el aprendizaje, es decir que, han sido optimizadas mediante el uso de sistemas de machine learning o deep learning para poder instruirse de forma autónoma, sin necesidad de que se le instale un software con una base de datos precargada que le indique o imponga los criterios de comportamiento. Siendo así como, logra desarrollarse para realizar una o varias tareas específicas, en base a algunas instrucciones previas y un sistema de entrenamiento que le permite gradualmente resolver un problema de forma más eficiente, a tal punto que supera al mismo ser humano.
+
+Una vez adiestradas estas redes neuronales, se las combinan con diversos programas, para potenciarlos, como ocurre en numerosos casos exitosos.
+
+Es así que, para dejar en claro este concepto, vemos que, la inteligencia artificial débil, está enfocada a realizar una o unas actividades definidas, sin importar lo bien que lo hagan. Deep Blue es parte de esta clasificación, ya que, por más que juegue muy bien al ajedrez, es lo único que sabe hacer.
+
+Entre tantos ejemplos, podemos encontrar, el motor de búsqueda de Google, que anteriormente empleaba un algoritmo muy elevado que parecía inteligente, pero no dejaba de ser un calculo matemático. Desde 2015 el mismo se encuentra potenciado por una inteligencia artificial de este tipo conocida como RankBrain.
+
+En el área del derecho se encuentra el sistema ROSS, creado por IBM y trabajando en una firma estadounidense especializada en la gestión de quiebras. Es encargado de formular posibles hipótesis que respondan a una pregunta concreta analizando todo el cuerpo de legislación existente sobre el tema.
+
+Por su parte, en el ámbito penal el sistema COMPAS, también se encuentra funcionando como un algoritmo encargado de darle un puntaje a los criminales para predecir las posibilidades de reincidencia en aquellos Estados de Estados Unidos que emplean la metodología de scoring para determinar la eventual libertad condicional de los delincuentes. Además tenemos un abanico de variados programas de estudio de mercado para inversiones bursátiles que le permite a los grandes operadores realizar transacciones en cuestión de segundos, sistemas de conducción de vehículos autónoma, entre otras.
+
+Asimismo, podemos ver en este contexto que, no todos los casos resultaron exitosos. Siendo una de las tantas contrapartidas el caso de Tay. La inteligencia artificial desarrollada por Microsoft, implementada en 2016, era un chatbot que conversaba con los usuarios, con la particularidad de ir aprendiendo de los diálogos que mantenía con sus interlocutores y así, con la interacción que tenia a través de las redes sociales, desarrollar una personalidad. El inconveniente surgió debido a que los diferentes diálogos lo llevaron, al día siguiente de su lanzamiento, a expresar ideas nazis y machista producto de lo que le habían enseñado varios usuarios. Trabajo de, los denominados, "troles" y gente ociosa, lograron enseñarle información errónea o poco conveniente para dicho desarrollo. Siendo este un ejemplo claro de lo que cita uno de los viejos refranes de la informática Garbage In, Garbage Out (si entra basura, sale basura). Dándonos como conclusión el fracaso de la prueba y demostrando que, ese aprendizaje en casos así requiere la asistencia de personas responsables para lograr un resultado positivo, ya que necesita parámetros de ética que le marque la diferencia entre el bien y el mal.
+
+\section{Inteligencia artificial fuerte o general}
+Su término surge del inglés Artificial General Intelligence (AGI), siendo aquella que asume que la mente está formada por algoritmos altamente complejos que pueden ser descifrados y convertidos en programas de computadora. Esta idea tiene como conclusión la posibilidad de que la mente humana puede ser digitalizada y almacenada en un sistema informático. Es así que, ya no estaríamos hablando de una inteligencia artificial idónea para brindar soluciones a dificultades puntuales de forma muy eficiente, sino que sería capaz de resolver problemas generales como lo indica su nombre. Esta misma, en un primer instante, será como la mente de un niño de corta edad que nos podrá responder preguntas simples de diversos temas, pero lo importante aquí es determinar si llegará a conseguir un grado de "raciocinio". Es en este punto, en donde surgen grandes complicaciones, dado que abrirá las puertas al segundo paso, hablamos del desarrollo.
+
+Una vez que la inteligencia artificial está funcionando y desplegándose, nos brindará soluciones a los múltiples problemas que le presentemos, pasando por grados cada vez más complejos. El inminente desarrollo que se producirá es incierto respecto a su forma, debido a que, es imposible saber cuales son los procesos que internamente ejecuta para brindarnos los distintos resultados y cual es el recableado aleatorio que realiza esa red neuronal para efectuar una operación, teniendo el problema de la "caja negra" antes mencionado.
+
+Siendo así que, estaríamos en condiciones de asegurar que su funcionamiento empieza a parecerse a lo que sería un razonamiento lógico, logrando afirmar que nos encontramos efectivamente con una inteligencia artificial fuerte y no estamos frente a otra inteligencia artificial débil. Desapareciendo, lo que diferencia a las computadoras de los seres humanos; donde las primeras, solamente pueden alcanzar valores predeterminados; mientras que las personas además de alcanzarlos son capaces de desarrollar los valores.
+
+Este tipo de inteligencia todavía no ha nacido, sin embargo, es probable que en los próximos años se consiga mediante la implementación de tres tipos de técnicas: recreación del funcionamiento de un cerebro, la simulación de la evolución celular y la programación de las inteligencias artificiales débiles para crear una inteligencia artificial fuerte.
+
+\subsection{Súper inteligencia artificial}
+La Súper Inteligencia Artificial es el grado superior de desarrollo, pudiendo definirse como aquella inteligencia artificial que ya no busca imitar el pensamiento del hombre, sino que va más allá, teniendo una capacidad cognitiva superior a la de un ser humano.
+
+Su nombre proveniente del inglés Artificial Superintelligence (ASI). Este tipo de inteligencia, nacerá de la evolución de una Inteligencia Artificial Fuerte (AGI), la cual surgirá como la mente de un niño, pero rápidamente irá evolucionando para convertirse en una inteligencia mucho mayor a la de un ser humano. Creciendo sin restricciones de forma exponencial, siendo su punto trascendental de progreso la capacidad ilimitada de recablear su red neuronal para adaptarla a los resultados de las experiencias y experimentos que realice y la posibilidad de almacenamiento casi infinita.
+
+La aparición de este tipo de inteligencia, dará lugar a lo que los científicos denominan como "singularidad tecnológica". Dicho fenómeno, prevé una inteligencia artificial con un nivel similar al de un ser humano en un primer momento, que rápidamente logrará superarnos, teniendo la habilidad de mejorarse a si misma y con la capacidad de diseñar nuevas computadoras iguales o superiores a ella. Produciéndose un incremento de inteligencia fuera de control, llegándose a superar infinitamente los niveles de inteligencia del ser humano.
+
+En un artículo, el filósofo David Chalmers, señala en sus escritos que, es cuestión de tiempo para que aparezca este fenómeno. Además, esta establece una lógica para describir la llegada de la súper inteligencia con tres niveles:
+
+IA es inteligencia artificial un tipo de inteligencia al menos igual a la humana;
+IA + es inteligencia de un nivel superior a la humana;
+IA ++ es inteligencia de un nivel muy superior al humano (superinteligencia).
+Y donde habrá IA que se desarrollará hasta ser IA+, por lo tanto habrá IA++.
+
+Observando estos conceptos, vemos que a lo largo de estos años hubo grandes confusiones y exageración mediática sobre los desarrollos de inteligencia artificial. Apareciendo supercomputadoras con gran capacidad de procesamiento de datos y almacenamiento como centro de escenarios que, en realidad, no contaban con la posibilidad de adquirir información aprendida, sino que contaban con base de datos muy grandes.
+
+Sobre el origen de este desconcierto, el investigador de robótica austriaco Hans Moravec desarrollo, lo que es conocido como, la "paradoja de Moravec", el cual señala que es relativamente fácil conseguir que los sistemas muestren capacidades similares a las de un ser humano adulto en un test de inteligencia o a la hora de jugar a las damas, y muy difícil lograr que adquieran las habilidades perceptivas y motoras de un bebé de un año. Por lo tanto, muy por el contrario de lo que pensamos comúnmente, plantea que, el pensamiento razonado humano requiere un menor desarrollo tecnológico para su imitación que las habilidades sensoriales y motoras que se realizan de manera poco consiente.
+
+En la actualidad, podemos decir que nos encontramos con varias inteligencias artificiales débiles muy potentes, pero falta bastante camino por recorrer para lograr una inteligencia artificial fuerte y será difícil reconocerla. Sin embargo, podemos afirmar que cuando esta aparezca, se pronostica que se llegara al nivel máximo rápidamente logrando emerger la súper inteligencia artificial.
+
+\chapter{Métodos de aprendizaje de la inteligencia artificial}
+Actualmente existen dos métodos que son predominantes en el área del aprendizaje de estas tecnologías. El primero es machine learning o aprendizaje automático, nacido a fines de la década del '70 y principios de los '80. En tanto, en el año 2006, surgiría como rama de aquella el deep learning o aprendizaje profundo, acuñado así por Geoffrey Hinton, como forma de explicar nuevas arquitecturas de redes neuronales profundas que son capaces de adquirir los conocimientos mucho mejor empleando modelos más planos. Estos métodos iremos viéndolos en detalle a lo largo del capítulo.
+
+\section{Machine learning}
+El "aprendizaje automático", también conocido en inglés como machine learning, es la rama de la inteligencia artificial que se dedica al estudio de los agentes o programas que aprenden o evolucionan basados en su experiencia, para realizar una tarea determinada cada vez mejor. Siendo el objetivo principal de este, como de todo proceso de aprendizaje, utilizar la evidencia conocida para poder crear una hipótesis y poder dar una respuesta a nuevas situaciones no conocidas.
+
+Para comprender como funciona, debemos ver como resuelven individualmente problemas el ser humano y los programas de informáticos.
+
+Las personas, entienden y desarrollan soluciones a los problemas basándose, en un primer momento, en la teoría y luego respalda y fortalece ese conocimiento al instante de aplicarlo en la práctica. En tanto, los programas de computadora funcionan de manera diferente, dado que, es indispensable la actividad del programador. Él entiende que hay un problema y desarrolla, al comienzo, un sistema que busque captar todas las posibles resoluciones para posteriormente, de forma ordenada, darle las instrucciones a una computadora para que las ejecute, lo cual denominamos "parseo de datos".
+
+Es así que, machine learning se presenta como la fusión ambas capacidades, otorgando la flexibilidad que tiene una persona capaz de aprender en base a las nuevas situaciones que se van presentando y sumándose la precisión que tiene un software que posee como núcleo de funcionamiento un sistema que abarca la solución eficiente de los casos conocidos.
+
+Por lo tanto, podemos plantear su funcionamiento como una caja, que contiene un bloque con varios algoritmos correspondientes a las instrucciones del programador, o sea, la teoría que abarca todo el rango de soluciones conocidas a los problemas más comunes y un bloque perteneciente a un algoritmo de machine learning que indica la forma y el momento en que se emplearán esos otros algoritmos, variando la manera en que se usarán frente a nuevos problemas.
+
+Este sistema lo podemos comparar, para su fácil comprensión, con la enseñanza a la que se someten los seres humanos desde la niñez.
+
+Al sistema de inteligencia artificial se le introduce, para que lo ejecute, un estímulo o ejemplo, el "parseo de datos", siendo equivalente al momento en donde un profesor enseña a un niño a resolver algún problema explicándole la lógica que requiere para llegar a la solución, o sea la teoría. El sistema, mediante el algoritmo de aprendizaje automático, lo procesa y extrae un modelo, al que llamamos en el aprendizaje humano, la interpretación del conocimiento teórico. Con este modelo, comienza la etapa de entrenamiento, proporcionándole nuevos casos, que la máquina es capaz de dar una respuesta. Frente a la solución entregada le indicara una pequeña colección de instrucciones para modificar el modelo cuando se produzcan errores o marcara el acierto. Es así que, para lograr el aprendizaje, se utiliza un método de premio y castigo. Donde a estos sistemas, al igual que en los niños, se les premian las conductas correctas, tendiendo la probabilidad de repetirse, mientras que las conductas que se sancionan tienden a desaparecer.
+
+Este tipo de aprendizaje, se lo cataloga como aprendizaje supervisado o dirigido, debido a la introducción en un primer momento de los estímulos o ejemplos que les sirven de modelo.
+
+De esta manera vemos que, los seres humanos somos lo que inicialmente sabemos realmente si un documento es una queja, una instancia, una reclamación, una solicitud de registro, una petición de cambio, etc. Una vez que los algoritmos cuentan con un conjunto de entrenamiento proporcionado por los humanos, entonces son capaces de generalizar y empezar a clasificar documentos de forma automática sin intervención humana.
+
+En la actualidad, podemos ver en funcionamiento este tipo de aprendizaje en las inteligencias artificiales encargadas de clasificar los correos electrónicos y desechar el spam. La más destacada es la empleada por Gmail de Google. En este caso, notamos que una persona puede clasificar los mails de una bandeja de entrada casi de forma inconciente y con un margen de error al diferenciarlos muy baja. Pero al asignarle este trabajo a un sistema, hay que realizarle el parseo de datos con algunos parámetros. Pudiendo el programador notar que muchos correos spam tienen características que se repiten, como lo son: palabras clave, signos de exclamación, errores gramaticales, entre otros. Pero es necesario tener en cuenta, que estas características no significan una generalidad. Por lo tanto, con esta información inicial el algoritmo puede analizar el asunto y el cuerpo del correo y llegar a tener un alto grado de efectividad. Con los nuevos datos se empieza a ver el aprendizaje dirigido, chequeando los nuevos correos, evolucionando junto a las nuevas conductas que vaya teniendo el nuevo correo spam, encontrando nuevas palabras clave, nuevos signos de exclamación, nuevas conductas gramaticales y hasta descubriendo nuevos patrones que el programador no observó en un primer momento. Consiguiendo clasificar correctamente al reconocer distintos patrones que se le van presentando. Sumado a esto que, el sistema sigue aprendiendo también de lo que el usuario le indica. Es así que, en caso de que un correo estuviese mal clasificado, este puede realizar la corrección y así, el sistema vuelve a reclasificar sus prioridades, depurando el error y ejecutando de una manera más eficiente la secuencia de algoritmos de filtrado.
+
+Otras aplicaciones de esta tecnología podemos encontrarlas en: detección de rostro en las cámaras digitales o teléfonos móviles con cámara, buscadores de Internet para mejorar los resultados y sugerencias en la búsqueda, anti-virus con la detección de software malicioso y predicciones y pronósticos mediante la recolección de datos de los usuarios se pueden recomendar y sugerir otros productos.
+
+En la actualidad, existen varios servicios conocidos que aplican este tipo de inteligencia, como lo son las plataformas de Amazon Machine Learning, IBM Watson Developer Cloud, Microsoft Azure Machine Learning, entre otras.
+
+\section{Deep learning}
+Conocido en español como "aprendizaje profundo", es una derivación dentro del campo del machine learning, el cual se basa en la idea del aprendizaje exclusivamente desde el entrenamiento.
+
+Es así que, en lugar de enseñarle el programador al sistema una lista enorme de reglas para solventar un problema, le damos directamente un modelo para que pueda, mediante ejemplos, realizar la evaluación. Una vez entregada una respuesta, se le dará, cuando se produzcan errores, una pequeña colección de instrucciones para modificar el modelo. De esta manera, con el tiempo esperamos que esos modelos sean capaces de solucionar el problema de forma extremadamente precisa, gracias a que el sistema es capaz de extraer patrones o anomalías por si mismo. Este sistema de aprendizaje es una clase de "aprendizaje no supervisado", precisamente por esta distinción.
+
+Su funcionamiento puede ser fácilmente comprendido, empleando aquí también, el caso de la educación del niño. En este supuesto, debemos imaginar un chico más pequeño que recién empieza a hablar y reconocer objetos y animales, entre otras cosas. Como indicamos al principio, en este sistema no existe una teoría, o lo que sería para la máquina un parseo de datos. Por lo tanto, vemos que el niño aprende la palabra "perro". Luego empieza a entender lo que es, y lo que no es, un perro señalando objetos y diciendo la palabra "perro". El padre, o instructor, evalúa los resultados otorgando respuestas positivas o negativas a las resoluciones entregadas. Mientras el niño continúa apuntando a los objetos, se vuelve más consciente de las características que poseen todos los perros. Lo que el chico hace, sin saberlo, es aclarar una abstracción compleja del concepto de perro, construyendo una jerarquía en la que cada nivel de abstracción se crea con el conocimiento que se obtuvo de la capa precedente de la jerarquía. Lo mismo el sistema, de cada resultado va adquiriendo en detalle las características del objeto, aumentando su precisión.
+
+Para especificar, cómo funciona el sistema de deep learning en una red neuronal, podemos decir que, internamente se produce el desarrollo mediante el empleo de las capas internas (la denominada "caja negra") de la red neuronal. Cada capa procesa la información y arroja un resultado que se revela en forma de ponderación. Cuando una unidad de un sistema analice una foto en busca de "perros" concluirá que dicha imagen es en un 78% de probabilidad un perro y en un 22% no lo es. La segunda capa que analice la imagen combinará el resultado obtenido por la primera capa con su propio juicio. De tal forma que la ponderación se modificará y se trasladará a la tercera capa, que también usará este dato para sacar su propia conclusión. Así sucesivamente y en muchas ocasiones (hay algoritmos que usan más de 100 capas).
+
+El término "profundo" suele hacer referencia al número de capas ocultas en la red neuronal. Las redes neuronales tradicionales solo contienen dos o tres capas ocultas, mientras que las redes profundas pueden tener hasta 150 capas.
+
+Esto es una gran ventaja respecto al machine learning. Debido a que, en el aprendizaje supervisado, el programador tiene que ser muy específico al decirle al sistema los detalles para determinar si el objeto del que se trata. Este proceso complejo es denominado "extracción de características" y la tasa de éxito de los sistemas dependerá de la capacidad del programador para definir con precisión un conjunto para la resolución del problema. Siendo beneficioso en el aprendizaje profundo que, el programa construye el conjunto de características por sí mismo sin supervisión. Esto no es sólo más rápido, sino que por lo general es más preciso.
+
+De esta manera, logramos también definir como característica que, el deep learning imita el comportamiento de un sistema nervioso, donde cada neurona, en este caso cada capa, actúa de forma diferente, siendo experta en una sola característica. Además comienza a integrar funciones psicológicas propiamente humanas como la memoria, el razonamiento, la atención, la motivación y las emociones.
+
+Esto lo podemos diferenciar del aprendizaje dirigido, en el cual, las redes neuronales tienen un comportamiento de forma monolítica, o sea, actúan de igual manera entre sí, por lo tanto pueden cumplir todas las mismas funciones.
+
+Por eso decimos que, el aprendizaje profundo es la tecnología más empleada y en amplia expansión. Actualmente se utiliza en programas tales como: traductores inteligentes, reconocimiento de voz con resultados cada vez más precisos y rápidos, la interpretación semántica con máquinas capaces de entender comentarios y conversaciones (ej: asistentes de voz Apple Siri y Microsoft Cortana), reconocimiento de imágenes, entre otras.
+
+\chapter{La caja negra y el inconveniente de justificar las decisiones}
+Como fue adelantado en el capítulo de redes neuronales. El gran problema de este tipo de inteligencia artificial y del desarrollo de técnicas de aprendizaje, principalmente de deep learning, es el fenómeno de la caja negra. Esta contingencia nace de la imposibilidad de conocer que sucede en el interior de las capas intermedias de las redes neuronales que nos permitiría justiciar el resultado o decisión tomada. Es así que, en este contexto solo conocemos que ocurre en la entrada y en la salida del mismo. Dichas capas son tan opacas como el cerebro. Este impedimento se presenta, debido a que, en lugar de almacenar lo que ha aprendido en un bloque de memoria digital, propaga la información de una forma extremadamente compleja de descifrar.
+
+La caja negra, es el gran desencadenante de los miedos y las incertidumbres sobre el control y el desarrollo que debe darse a estas tecnologías.
+
+El profesor de la Universidad de Carnegie Mellon, en Pensilvania, Dean Pomerleau fue uno de los primeros en enfrentarse a esta dificultad en 1991. En aquel entonces, se encontraba desarrollando un vehículo militar de conducción autónoma.
+
+Luego de varias sesiones de aprendizaje de conducción exitosas, en un recorrido de pruebas, el automóvil se acercó a un puente y se empezó a desviar peligrosamente. Pomerleau, con muy buenos reflejos, tomó el control manual y evitó el impacto. Después del evento, el científico decidió comprender que ocurrió con esa red neuronal y empezó a estudiar la caja negra, o sea las capas intermedias. Realizando incansables estudios sobre la interpretación de la inteligencia artificial de los diversos estímulos visuales, pudo encontrar qué le hizo creer en aquel momento que la mejor opción era salirse del camino. El sistema tomaba como referencia para determinar el camino, los bordes de pasto que estaban al costado y, en aquella ocasión, el aspecto del puente le resulto confuso.
+
+Pero si, en ese entonces, era complejo interpretar las capas intermedias de una red neuronal, actualmente podemos decir que se acerca a lo imposible. Dado que los sistemas no son como antes donde predominaba el machine learning, con redes neuronales compuestas con algunas capas y con las indicaciones claras del resultado esperado brindadas por un programador. En estos tiempos la evolución del propio aprendizaje automático y la aparición del aprendizaje profundo, gestionan toda la información de forma desconocida para nosotros y son los algoritmos que se encuentran en la gran cantidad de capas intermedias los que le "autoenseñan" los conceptos adquiridos a esta inteligencia artificial.
+
+
+
+\chapter{Advertencias de un futuro complejo y peligroso}
+El temor a lo desconocido, es una de las características, no solo de la especie humana, sino de todo ser vivo. El no saber que resultado va a tener una determinada acción es un factor natural. Pero si quienes plantean un escenario alarmante son los mismos especialistas, las personas que conocen en detalle de que estamos hablando cuando mencionamos "inteligencia artificial", entonces resulta verdaderamente inquietante. Es así que, se debe prestar especial atención a las personas reconocidas de la ciencia y la tecnología que han demostrado su descontento y advirtieron que, la inteligencia artificial, es un tema que debe manejarse de forma más responsable.
+
+Entre los detractores del avance desmedido se encuentra Bill Gates. El cofundador de Microsoft, remarcó en varias ocasiones que se encuentra en el grupo de personas que se preocupa por el surgimiento de la súper inteligencia artificial. Primero, las máquinas harán muchos trabajos por nosotros y no serán súper inteligentes. Eso debería ser positivo si lo gestionamos bien. Sin embargo, unas décadas después de aquello, la inteligencia será lo suficientemente fuerte como para inquietarnos. También resalta que, al igual que Elon Musk y otros referentes en el tema, no entiende por qué algunas personas no están preocupadas.
+
+Otro gran empresario como Steve Wozniak, cofundador de Apple, del mismo modo expone su incertidumbre respecto a la inteligencia artificial. Planteando que, esta bien perseguir el desarrollo de la misma, dado que se trata de exploración científica. Pero podría significar nuestro descenso como especie superior. Encontrándonos con sistemas que nos van a considera lentos y se encargaran de llevar adelante todo de forma más rápida y eficiente. Pudiendo la humanidad acabar bajo la opresión de las máquinas.
+
+Por su lado, el físico y divulgador científico recientemente fallecido Stephen Hawking, no presentaba una postura contraria respecto a las investigaciones en esta materia, pero señala que, no se está tomando con la seriedad que el tema amerita. Sus motivos se basaban en la falta de recaudos acordes por mantener bajo control los sistemas que se encuentran en etapa de gestación. Además, Hawking, remarcó que, se está tomando con extrema pasividad la llegada de una tecnológica que sabemos que tiene el potencial para ser el mayor acierto, o el peor error de la humanidad.
+
+Por otra parte, Elon Musk, inventor y cofundador de grandes empresas como PayPal y Tesla Motors, entre otras compañías, es uno de los más activos detractores de la inteligencia artificial. Con declaraciones provocadoras como "la inteligencia artificial es más peligrosa que las armas nucleares",el investigador indicó numerosas veces que la elaboración de estas máquinas es como "invocar al demonio".En este contexto Elon Musk arremete contra los desarrollos que se encuentran realizando varias empresas, iniciando una batalla con Mark Zuckerberg, declarando que el creador de Facebook no entiende los peligros de la inteligencia artificial, y con Google señalando sobre su preocupación por la posibilidad de que creen por accidente un ejército de robots capaz de aniquilar a la raza humana.
+
+Pero más allá de estas posturas, el desarrollo de la inteligencia artificial nos exhibe un desafío desde distintos lugares, obligándonos a diferenciar los posibles inconvenientes que se nos pueden empezar a presentar. Y dando lugar para que, en un análisis posterior, desde el derecho informático, comenzar a plantear diferentes regulaciones.
+
+
+
+\chapter{Las habilidades humanas de las nuevas máquinas}
+Para empezar a determinar, cuales serán los temas que el derecho deberá regular, tenemos que comprender cual es el panorama de manera amplia. La aparición de nuevos actores sociales que aprenden e interactúan con los seres humanos nos obligara a algo mucho más grande que una simple normativa basada en estándares de fabricación. Los sistemas tienen varias habilidades que se nos escapan por no haber sido programadas en el sistema, sino aprendidas por él mismo. Esto lo analizaremos a lo largo del capítulo.
+
+
+\section{Los sistemas aprenderán a mentir}
+Todo ser vivo miente, desde las personas para obtener beneficios, hasta las plantas o animales mienten en su comportamiento para atrapar a su presa o evitar ser cazados.
+
+Las máquinas tienen la habilidad de aprender de nosotros y esto será un paso importante. Actualmente existen inteligencias artificiales como Libratus, sistema diseñado para jugar al póker, aprendiendo luego de varios juegos a mentir. Proyectos que reflejan un mayor desarrollo del nivel de engaño como lo es Google Brain, también demostró estas habilidades, no con un juego, sino con un test. En el mismo, los científicos realizaron pruebas para saber si este tipo de redes pueden aprender a utilizar claves secretas para proteger información y confundir a otros sistemas de inteligencia artificial. Para esto, emplearon tres redes neuronales artificiales, a las que bautizaron como Alice, Bob y Eve. Las dos primeras tenían la tarea de enviarse mensajes, mientras que la última será la encargada de espiar dichos mensajes a escondidas. El resultado de esta experiencia nos mostró que, la red neuronal Alice desarrolló un sistema de cifrado que Bob aprendió rápidamente, pero que Eve no pudo descifrar, engañando así a esta ultima.
+
+Sin embargo, tal vez el caso más destacado, es el realizado en Suiza por un grupo de científicos encargados de estudiar diferentes aspectos de robótica y biología evolutiva. En el ensayo se efectuó una prueba trascendente, la cual constaba con 100 grupos de 10 sencillos robots a los que asignaban la tarea de "buscar comida" en un área controlada bajo una serie de reglas como encender una luz azul cuando encontraban el "alimento" para avisar a sus compañeros. Después de 100 vueltas, los robots que habían conseguido más puntos pasaban a la siguiente ronda. A medida que avanzaban las pruebas, los investigadores comprobaron que aquellos que conseguían más comida mantenían en secreto su ubicación, o sea no encendían la luz. Y lo que es más sorprendente, que a partir de la 50ª generación algunos de ellos mandaban la señal en zonas donde no había alimento, para confundir al resto.
+
+De esta forma advertimos que, las máquinas al toparse con intereses superpuestos, la misma competitividad provoca que rompan o lleguen al limite de las reglas impuestas, para aventajar a sus competidores, alterando su comportamiento para alcanzar un objetivo, como lo haría un animal o un ser humano.
+
+\section{Los robots se harán pasar por humanos}
+Continuando con el planteo referente al engaño, destacamos el más relevante y más complejo de estudiar entorno a la inteligencia artificial. La posibilidad que se haga pasar por ser humano. Dicho ardid, en la actualidad no resulta tan posible respecto al aspecto físico, debido a que se encuentra en desarrollo la apariencia física de los androides. En tanto, en lo relacionado a interacciones básicas, puede ser altamente eficaz. El principal ejemplo lo tenemos con los chatbots que ya hemos mencionado anteriormente.
+
+El caso más destacado, entre la gran variedad de hechos que se presentaron, fue el del ejército automatizado de chatbots utilizados por uno de los candidatos en las últimas elecciones de Estados Unidos. Aquí, si bien los robots no decidieron engañar a los humanos como si se tratara de una conspiración autómata de ciencia ficción. Estos programas, capaces de simular una conversación, habrían sido empleados por uno de los grupos de campaña como elemento para confundir a los votantes. Con inteligencia artificial y habilidades de comunicación muy sofisticadas, estos sistemas buscaban abrirse paso en los diálogos en línea entre los seguidores de su rival electoral y emitir noticias falsas. Valiéndose para conseguir este objetivo, entre varias técnicas, el manejo de grandes volúmenes de información adquirida de forma fraudulenta por la consultora inglesa Cambridge Analytica. Accediendo a los datos de aproximadamente 50 millones de perfiles de Facebook sin el consentimiento de los usuarios de la red social.
+
+Los investigadores de la Universidad de Oxford, quienes también habían informado algo similar en el voto británico "Brexit", descubrieron el manejo de bots. Para llegar a este resultado estudiaron más de 19 millones de publicaciones de Twitter. Indicando que, por ejemplo, las 20 cuentas principales, que eran en su mayoría bots y cuentas altamente automatizadas, promediaron más de 1.300 tweets por día y generaron más de 234,000.
+
+Como contraparte tenemos un caso positivo, a pesar del engaño del sistema sobre su condición, se trató de Jill Watson. Esta inteligencia artificial es un chatbot que representa a una profesora, llegando a dar clases a 300 alumnos durante un semestre. Jill, fue probada brindando el curso online de diseño de programas informáticos en la Universidad Tecnológica de Georgia. El nivel de enseñanza conseguido fue tan alto que se pensó en nominarla como mejor profesora de la universidad. Pero finalmente las autoridades dieron a conocer a los alumnos que se trataba realmente de una inteligencia artificial elaborada por IBM. Dicho sistema posee la capacidad de un experto, ya que Watson sólo responde si tiene una seguridad en su respuesta del 97%.
+
+Es así que, las posibilidades de engaño son reales, ya sea por la implementación de técnicas muy sofisticadas o por el manejo masivo de bots con información sensible. Por este temor, existe gran paranoia y muchas teorías que en su gran mayoría, por el momento, alimentan la literatura fantástica. Pero también, debemos reconocer, que fueron el origen de técnicas muy aplicables a nuestro contexto, que nos posibilita distinguir al hombre de la máquina, y que veremos en este apartado.
+
+\subsection{Test de Turing}
+es uno de los más conocidos en el ámbito de la robótica y la inteligencia artificial. El mismo, prueba la habilidad de una máquina de exhibir un comportamiento inteligente similar o indistinguible al de un humano. Engañando así a su interlocutor.
+
+Su desarrollo se basa en el juego de imitación. La idea original es tener tres personas, un interrogador, un hombre y una mujer. El interrogador está apartado de los otros dos, y sólo puede comunicarse con ellos escribiendo en un lenguaje que todos entiendan. El objetivo del interrogador es descubrir quien es la mujer y quien es el hombre, mientras que el de los otros dos participantes es convencer al interrogador de que son la mujer.
+
+La variante introducida por Turing consiste en sustituir a uno de los interrogados por una computadora. Pudiéndose implementar en dos casos, que se sustituya al hombre, con lo cuál sólo la máquina tendría que aparentar ser una mujer, o que se reemplace a la mujer, donde tanto el hombre como el ordenador estarían imitando o mintiendo. Aunque esta última opción podría ser un experimento interesante, no se intenta comprobar la habilidad de imitar a una mujer, así Turing cambia el objetivo de conocer el género de la persona por el de reconocer a la máquina.
+
+La finalidad de estos cambios es hacer el juego lo más justo posible. Lo primero, es que no tiene que consistir en un concurso de engaños, por lo que uno de los implicados no tendría por qué aparentar ser otra cosa. Otro detalle es que a Turing poco le importa si el ordenador emplea trucos preestablecidos para eludir o manipular las respuestas; como podría ser, equivocándose en preguntas aritméticas o tardando más tiempo del necesario en responderlas. Supone que el interrogador también las empleará para reconocerle. Así que, lo importante es lo que resulta del juego, no los métodos que se emplean para jugar ni los mecanismos internos de razonamiento que, entre otras cosas, también son desconocidos en el ser humano.
+
+Una máquina podría pasar el test de Turing cuando el interrogador no lograra reconocerlo en un número significativo de ocasiones.
+
+Una vez planteado este contexto, vemos que ya hay máquinas que lograron eludir con éxito este sistema. Por primera vez en la historia, una computadora ha conseguido hacerse pasar por un humano de forma suficientemente satisfactoria como para completar el distinguido test de Turing. Eugene Goostman, es el nombre del bot conversacional, un programa desarrollado por un equipo de investigadores rusos. El software logró en el certamen organizado por la Escuela de Ingeniería de Sistemas de la Universidad de Reading y realizada en la Royal Society de Londres, engañar al 33% de los jueces en diálogos mediante texto por un periodo de cinco minutos. Eugene es retratado como un niño de 13 años de edad, sus creadores lo han diseñado así para aparentar que no es demasiado viejo como para saber todo, ni demasiado joven como para carecer de demasiados conocimientos, dándoles un margen de dialogo que resulte factible pero, que les permita una ampliación o mejora a futuro.
+
+Uno de los jueces, Kevin Warwich, profesor de la Universidad de Reading, al pedirle una reflexión respecto a lo sucedido señalo: "Que haya una computadora que pueda engañar a un ser humano y lo haga pensar que es una persona, es un llamado de alerta. El test de Turing es una herramienta vital para combatir esa amenaza".
+
+\subsection{Test de Turing en reversa: el surgimiento del captcha}
+Frente a varias criticas de la comunidad científica y los intentos de desarrollo de teorías más firmes que la planteada por Alan Turing, se buscó perfeccionar el sistema de reconocimiento de máquinas impostoras.
+
+Es así que surge la hipótesis, desarrollada por Wilfren Bion, Peter Swirski y Peter Robert Hinshelwood. Estos especialistas, en distintos momentos, perseguían el concepto que describe a la mente como un "aparato para reconocer mentes".
+
+Planteándose, con esta premisa, el desafío de crear una computadora que tenga la habilidad de comprobar si está interactuando con un ser humano o con otra computadora. Esta es una extensión de la pregunta original que Turing intentaba responder y, probablemente, ofrece un estándar lo suficientemente alto para definir que una máquina puede "pensar" de una manera que describimos como humana.
+
+De esta manera nace el CAPTCHA, que es la "Prueba de Turing completamente pública y automática para diferenciar máquinas de humanos", sus siglas en inglés nacen de su nombre "Completely Automated Public Turing test to tell Computers and Humans Apart".
+
+En este test, el interrogador es una computadora, en lugar de un ser humano como en el test de Turing. Por este motivo, decimos que es una prueba de Turing inversa.
+
+Este sistema es muy popular en Internet, en especial en sitios que consultan a bases de datos para exponer su información. Consiste en que la máquina-interrogador (software) presente en una imagen distorsionada que aparece en pantalla que esconde una serie de caracteres alfanuméricos. Los cuales el usuario debe reconocerlos e introducirlos correctamente en un campo de texto donde se le solicita la transcripción como respuesta. Se supone que una máquina no es capaz de comprender e introducir la secuencia, por lo que solo un humano podría hacerlo.
+
+De esta manera, antes de realizar una acción en algunos sitios web, se realiza la comprobación con el propósito de prevenir la entrada de sistemas automatizados comúnmente usados para perpetrar diferente tipo de abuso y ataques. Este tipo de comprobaciones es muy utilizado en la actualidad, en especial algunas variantes como el Google reCAPTCHA y el CAPTCHAart que aumentan la complejidad distorsionando algo más los caracteres.
+
+La complejidad de dicho sistema puede ser resuelto por el ser humano en el 87% de ocasiones, lo cual no resulta preocupante, dado que la base de este método es que las máquinas no puedan superarlo, considerándose inservible si descifran en más de 1%.
+
+Este límite es establecido para los sistemas promedio, dado que existe algunos programas lo  suficientemente sofisticados para leer y reproducir la imagen con precisión.
+
+Un ejemplo de estos sistemas que pueden engañar a otras máquinas es el de RCN, Red Cortical Recursiva, por sus siglas en inglés. Es un algoritmo, basado en una red neuronal artificial que imita el funcionamiento del cerebro cuando resuelve este tipo de problemas. Trabajando de una manera muy similar al córtex visual de los mamíferos a la hora de procesar las imágenes, es capaz de enfrentarse a estos sistemas de autenticación de manera satisfactoria. El método empleado para dicho éxito se basó en el entrenamiento con conocimientos de neurociencia, siendo así que, un grupo de científicos de la empresa Vicarious AI, han logrado romper con este sistema de testeo. Las pruebas otorgaron resultados donde, la máquina pudo burlar el CAPTCHA de Yahoo un 57,4% de las veces, el de PayPal 57,1%, el de BotDetect at 64,4% y el reCAPTCHA de Google un 67% de las mismas.
+
+\section{Los sistemas nos conocerán mejor que otras personas
+}
+Desde una computadora con un perfil de gustos y costumbres de navegación, un teléfono que sabe el camino y la hora en la que realizamos todos los días el camino a nuestro trabajo, hasta una aspiradora que sabe las dimensiones de todas las habitaciones de nuestra casa.
+
+Los sistemas tienen cada vez más información de nosotros y nuestro entorno. Conectados a Internet todo el tiempo y empleando sistemas de aprendizaje colaborativo con otros sistemas, nuestra información es recolectada y transmitida en todo momento. Los grandes volúmenes de registros que se manejan en la actualidad en las bases de datos no quitan que cada información recogida sea una transgresión al derecho de su dueño.
+
+El surgimiento de "big data", que hace referencia a la recolección de datos masivos, obteniendo grandes colecciones de información, estructurados o no estructurados, que pueden crecer enormemente y a un ritmo muy acelerado, es una de las áreas donde más se utiliza la inteligencia artificial y donde resulta indispensable. Sumado al "data mining" o minería de datos, que analiza aquellos datos extraídos de big data, para obtener información con una estructura comprensible con la finalidad de un uso posterior.
+
+Gran parte de la industria muestra los aspectos positivos de este desarrollo, por ejemplo, señalando que el proceso de aprendizaje de los vehículos inteligentes sería muy lento si consideramos que, los autos están parados el 97 \% del tiempo. En cambio, con el sistema colaborativo y el envío de los grandes volúmenes de información, la eficiencia del sistema se incrementa notablemente. Dado que el combustible de la inteligencia artificial son los datos, nuestros datos, para aprender de ellos, de modo que utilizando esta información como patrón y aplicando la estadística, es capaz de realizar predicciones de futuro.
+
+\section{Las máquinas se parecen físicamente a nosotros}
+En este punto nos enfocamos totalmente a androides. Como desarrollamos anteriormente, estamos hablando de robots diseñados especialmente para parecerse en su físico y sus conductas lo más posible a una persona.
+
+Con un cráneo de plástico, esqueleto de metal y piel de silicona, sumado a múltiples sensores que hacen que sus movimientos sean cada vez más reales, la robótica enfoca a perfeccionar este campo hasta lograr un prototipo imposible de distinguir de los seres humanos.
+
+Pero los sentimientos que experimentan los seres humanos a este parecido y a su evolución, es un complejo e interesante tema de estudio. La reacción de las personas en un primer momento es de asombro, pero a medida que se va logrando el desarrollo estético del robot, surge en ellas un curioso fenómeno del mundo de la robótica denominado "valle inquietante" o "valle inexplicable".
+
+La hipótesis surge de un estudio de Masahiro Mori, un experto en robots japonés, que evaluó las diferentes respuestas emocionales de los seres humanos a entidades no humanas. Los resultados señalaron que, cuando la apariencia de un robot es más humana, la respuesta emocional de los seres humanos hacia el robot va creciendo de manera positiva generándose empatía, pero hay un punto, que al cruzarse, la respuesta se vuelve paradójicamente de total rechazo. Sin embargo, cuando la apariencia del robot continúa convirtiéndose menos distinguible de la de un ser humano, la respuesta emocional se vuelve positiva otra vez y se va aproximando a niveles de empatía como los que se dan entre humanos.
+
+\subsection{Grafico de respuesta empática del ser humano ante la semejanza física de robot o androide.}
+El grafico demuestra claramente como responden las personas y la llamativa depresión que se ve mucho mas acentuada en la curva correspondiente a los robots con movilidad (curva punteada). De esta manera observamos que, cuando un robot se parece a un humano entre un 0 a 65 \%, recibirá aceptación de las personas, siendo valores de empatía crecientes a medida que ese numero es más alto. En tanto, entre los valores aproximados del 65 \% a 85 \%, se producirá el rechazo, el cual llegará hasta la repugnancia, siendo extremadamente negativa la evaluación del observador. Llegando a tener una aceptación o respuesta empática mucho menor que el 0\%. Mientras que, si el androide se parece desde un 85\% a un 100\% a un ser humano, la aceptación parece retomar el camino que abandono. Recobrando nuevamente la empatía por las personas, incrementándose abruptamente la aprobación que sienten quienes lo ven y llegando al pico más alto de aceptación de toda la escala cuando esta en el 100\%.
+
+Por lo tanto, vemos que este valle es la respuesta emocional negativa que aparece cuando el robot antropomorfo tiene un grado de desarrollo en el que parece "casi humano".
+
+Según los estudios psicológicos indican que, al mirar un robot "inquietante" provoca principalmente miedo debido a que remite a pensamientos y sentimientos asociados a ser reemplazado en algunos aspectos de nuestra vida, el uso de prótesis, al deterioro físico extremo por alguna enfermedad y a la muerte, entre otros factores.
+
+\section{Los sistemas tienen emociones}
+Con la finalidad de conseguir humanizar a los diferentes sistemas y dotarlas de un comportamiento similar a las personas, se ha buscado emular en las inteligencias artificiales la capacidad de "sentir" emociones.
+
+La incorporación de diferentes tipos de sensores fue clave para este tipo de desarrollo. La instalación de estos dispositivos de entrada de información es un factor fundamental para brindarle información de entrada a la máquina, que puede emitir a la salida una acción similar a una reacción humana a el estimulo al que fue expuesto. Estableciendo una notoria diferencia entre, aquellas computadoras aislada respecto a una inteligencia artificial preparada para interactuar con un complejo mundo sensorial y reaccionando a lo que este le presenta.
+
+Una vez que los sistemas pueden expresar o representar diversos sentimientos, tenemos que estudiar, cuales podrán ser adaptables a su condición y cuales serían completamente impostados. Habiendo una gama de sentimientos, que simulan algo parecido a, por ejemplo: tristeza, alegría, decepción, miedo, sorpresa y compañerismo. En tanto, hay ciertas emociones y sensaciones que nunca podrá experimentar, ya que son producto de nuestra condición bioquímica como seres vivos, por lo tanto no tendrán la capacidad de percibir realmente, excepto que se los prepare para imitarlo, como por ejemplo: hambre, sed, atracción sexual, sueño, irritabilidad, estrés, fatiga e instintos de protección hacia su descendencia.
+
+En este contexto, Hiroshi Kobayashi, investigador del área de robótica en la Universidad de Ciencias de Tokio, tiene una visión muy escéptica sobre la inteligencia de las máquinas del futuro. El forjador de diversos desarrollos robóticos orientados a la imitación de las conductas humanas, no tiene una experiencia positiva en este tipo de campos. Inventor de Saya, el primer robot profesora para alumnos de quinto y sexto grado y de un androide que imitara las expresiones y la conducta de una persona deprimida, nos declara que "La emoción en los robots no es real, sólo se puede programar.", poniendo un limite a este campo que habla de sentimientos como algo que va más allá de recolectar información y realizar una tarea.
+
+De esta manera, con los adelantos tecnológicos de los que se disponen actualmente, no se puede hacer que una máquina "sienta" de la misma forma que lo hace un humano. Lo que sí se puede lograr es que el robot reconozca una serie de situaciones de la vida real y que responda a ellos según un modelo prefijado.
+
+\section{Las máquinas sustituyen al trabajo humano}
+Durante los últimos siglos, nos encontramos con muchas personas preocupadas, señalando que el progreso tecnológico provocara una gran cantidad de mano de obra desempleada.
+
+A lo largo del tiempo, podemos decir que esa gente estuvo parcialmente equivocada. Aunque haya habido mucha destrucción debido a la tecnología, podemos decir que fueron mayores las creaciones y que el mundo desarrollado nunca vivió un período muy prolongado con tasas altas de desempleo. Eso nos da como indicio que, el futuro puede no llegar a ser tan catastrófico como se lo pronostica.
+
+Pero tampoco es para estar quietos e indiferentes, debido a que las tecnologías modernas están llegando a un punto de desarrollo muy alto. Dándonos a entender que es posible que se necesite menos fuerza productiva humana para mantener una economía creciente.
+
+En el libro "La segunda era de las máquinas", los autores Erik Brynjolfsson y Andrew McAfee, directores de la Iniciativa del Instituto Tecnológico de Massachusetts (MIT) sobre Economía Digital e investigadores de las distintas formas en que la tecnología de la información afecta a las empresas. Nos indican que, estamos frente a un nuevo paradigma, planteando la existencia de dos eras de las máquinas.
+
+La Primera Era de las máquinas fue la época del proceso industrial y el capitalismo industrial con la aparición de las máquinas a vapor, la electricidad y los motores a explosión por combustible. En un contexto caracterizado por la menor exigencia de labor manual a la que se tenía antes este período. Fue una etapa que se prolongó un par de siglos, culminando hace unas décadas.
+
+En tanto, la Segunda Era es la de las máquinas es época que transitamos en nuestros días. Con una tecnología capaz de hacer cosas impensadas, pudiendo responder a preguntas mejor que los seres humanos. Desarrollos tales que, les otorga la habilidad de entender, reaccionar a nuestros estímulos y están empezando a tener una gran capacidad para realizar tareas más complejas. Actualmente, llegan hasta diagnosticar enfermedades, algo que se pensaba que era una cualidad exclusivamente humana. Planteando los autores que, todo este avance se desarrolla en una era de abundancia y riquezas.
+
+Respecto al empleo y las riquezas, la clave está en la distribución de las mismas. El punto de partida para interpretar la nueva realidad, puede encontrarse en el concepto de "destrucción creativa" ideado por el sociólogo alemán Werner Sombart. El mismo, se define por la aparición de nuevos productos que destruyen otros ya existentes en el comercio e incluso hacen desaparecer empresas y modelos de negocios hasta ese momento habituales en el propio mercado. Un ejemplo de esto son los productos como discos, cassettes, CD, DVD y distribución de música y películas online; y empresas contrapuestas de un mismo rubro como Blockbuster y Netflix.
+
+Podemos notar que, en la primera era de las máquinas, también hubo falta de empleo. Pero la reestructuración volvió a generar las nuevas fuentes de trabajo y se fortaleció la reforma con un trato social. El mismo establecería que, la gente debe ganarse la vida para poder acceder a las riquezas de la sociedad.
+
+En esta segunda era de las máquinas, con las nuevas condiciones, también significará la creación de nuevas fuentes de otro tipo de trabajo. Siendo lo único preocupante hasta el momento, la lentitud con la que se están produciendo. Por su parte, también deberá fortalecerse mediante el surgimiento de un renovado trato social para acceder a las riquezas.
+
+Es así que, la corriente más positivista, como la que señalábamos, considera que es una época de abundancia y pronto surgirán las nuevas fuentes de trabajo acordes a la nueva era que permitan una distribución más justa de las riquezas. Mientras que, por otra parte, tenemos una corriente más escéptica que considera que, los puestos de trabajo que se perdieron, en su gran mayoría, no volverán y por este motivo será el resultado el desempleo generalizado, dejando una clase privilegiada de propietarios de robot rentistas y de trabajadores altamente pagados con habilidades compatibles con las de un robot.
+
+Uno de los referentes de esta última corriente es Martin Ford, fundador de una empresa de desarrollo de software con sede en Silicon Valley y escritor del libro "El auge de los robots". El autor nos plantea un escenario de crecimiento tecnológico, en el que los bienes serán más económicos y accesibles en la mayoría de los ámbitos pero, paralelamente, también contaremos con menos puestos de trabajo debido a que las máquinas, los robots y los algoritmos lo hacen mejor que nosotros y a un costo menor. Es así que, es posible que desemboquemos en una nueva época feudal, en la que todos seremos pobres y solo un puñado de personas serán ricas y vivirán fortificadas (a la larga, sin embargo, esos mismos ricos se empobrecerán porque nadie comprará lo que fabrican, porque no habrá innovación, etc.).
+
+Por ultimo, la gran pregunta es, ¿cómo se accederá a los recursos y productos generados ahora por estos nuevos sistemas que reemplazan al ser humano en sus puestos de trabajo? Señalando Martin Ford, como solución, un concepto similar al del trato social al que hacían referencia los autores de la postura positivista del futuro Erik Brynjolfsson y Andrew McAfee y como ya se ha propuesto en algunos espacios de debate y decisión política, como por ejemplo el Foro Económico Mundial.
+
+La posibilidad de implementación de una renta básica universal como puntapié inicial de una nueva organización de la sociedad parece ser una de las respuestas. Diseñada con un sistema de recompensas que motiven al crecimiento personal y social, se idean diferentes incentivos que la incrementen, como por ejemplo el completar los diferentes niveles educativos, el trabajo comunitario o las labores con impacto positivo para el medio ambiente, entre otras.
+
+Otro punto coincidente en ambas posturas, se da en el análisis de que individuos se encuentran amenazados por la aparición de la inteligencia artificial. Las dos corrientes, con diferentes palabras, están de acuerdo que existen dos grupos de personas afectados. El primer grupo es la clase trabajadora, dado que hay una característica clave en la mayoría de sus trabajos es coincidente con la especialidad de los sistemas de hoy en día, que es "la rutina". En el presente, el campo que más dominan las máquinas es el de repetir muchas veces los mismos procesos de manera consistente. En tanto, el segundo grupo de trabajadores, que lentamente también comienzan a sentir el avance cada vez más fuerte de los sistemas en su ámbito, son aquellos en los que se requieren gran cantidad de conocimientos. Siendo esto equivalente a los trabajos mejor remunerados y a las manos de obra más calificadas como lo es la asesoría financiera, diagnostico de enfermedades, entre diversas especialidades.
+
+De esta manera notamos que, el futuro es incierto y variable, dependiendo de las necesidades de las diferentes sociedades y la fortaleza de las economías para afrontar estas variables planteadas. Es probable que la desaparición de puestos de trabajo de manera generalizada sea posible, casos como el de la empresa Foxconn que buscan automatizar completamente sus fábricas dejarán a un millón de personas en China sin trabajo rapidamente. Mientras que, distinta es la forma en que se manejan otras empresas, como el caso de Accenture, la cual automatizó tareas repetitivas de 17 mil puestos de trabajo, pero reasignó empleados a tareas no tan tediosas y no despidió a nadie, brindándonos expectativas de un futuro no tan apocalíptico.
+
+Esta incertidumbre nos hace plantearnos que, el camino para combatir estos cambios nace de la capacitación y progreso personal. Citando al ensayista estadounidense Elbert Hubbard, "Una máquina puede hacer el trabajo de 50 hombres corrientes. Pero no existe ninguna máquina que pueda hacer el trabajo de un hombre extraordinario".
+
+\section{La inteligencia artificial se implantará en los cerebros humanos}
+La idea de lograr potenciar las capacidades de los seres humanos es uno de los principales retos de esta ciencia. Se produjeron hace unos años grandes desarrollos en la Universidad de Michigan, logrando crear un cable capaz de conectar directamente el cerebro humano a una computadora. Otro gran paso se consiguió en el Instituto de Tecnología de Massachusetts (MIT), desarrollaron un método para estimular el cerebro mediante campos magnéticos sin necesidad de implantes ni de una intervención quirúrgica, simplemente inyectando diminutas partículas magnéticas.
+
+Facebook también se encuentra en este camino, con la cooperación de la Agencia de Proyectos de Investigación Avanzados del Departamento de Defensa de EE.UU. (DARPA), tiene varios proyectos en desarrollo. El principal de ellos busca traducir los impulsos cerebrales en códigos comprensibles para un sistema informático. Dicha idea, le dará la posibilidad a un individuo de poder escribir una frase en su computadora con solo pensarla y poder cuadruplicar la velocidad de escritura actual de modo táctil.
+
+Sin embargo, Mark Zuckerberg y Facebook, plantean tomar un nuevo rumbo, señalando que "dejaremos atrás los teléfonos móviles y las computadoras, para abrazar una nueva tecnología que nos permitirá enviar telepáticamente a otras personas no sólo nuestros pensamientos, sino también experiencias emocionales y sensoriales". Existen algunos desarrollos que se acercan a este tipo de aspiración de Zuckerberg, pero emplean técnicas invasivas que requieren necesariamente de una intervención quirúrgica para conectar los nodos directamente al cerebro de las personas.
+
+Si bien el cofundador de Tesla Motors, Elon Musk, ha demostrado estar en contra del desarrollo desmedido de la inteligencia artificial, como lo vimos en el inicio del capítulo, parte de sus estudios apuntan a la idea de que, humanos deben fusionarse con las máquinas o nos volveremos irrelevantes e inutilizables. Por este motivo, el empresario fundará una nueva firma de investigación llamada "Neuralink", la cual tendrá como objetivo principal crear una "interfaz cerebro-ordenador" que permita de diferentes maneras combinar las computadoras con cerebros humanos. Se trata de una especie de actualización para nuestro cerebro que nos dará la posibilidad de luchar contra enfermedades, al mismo tiempo que nos ponemos al día para competir contra la creciente participación de las máquinas en nuestra sociedad. En cuatro o cinco años el humano será un cyborg.
+
+Por otro lado, tenemos el aspecto ideológico que conlleva la fusión o búsqueda de desarrollo que nos llevaría a esta fusión. Aquí el filósofo Darío Sztajnszrajber señala que, las tecnologías no son algo ajeno al ser humano. Haciendo hincapié que, es un error pensar a la robótica y en general a la técnica como algo exterior al hombre como especie, dado que la independencia mutua no existe. Este concepto podemos verlo en nuestro cuerpo, el cual se encuentra atravesado por la técnica desde hace miles de años. Ejemplos de ésto son, los anteojos que corrigen la visión o en los medicamentos que uno toma para mejorar la salud. También señala que, es importante reconocer que nos dirigimos hacia lo robótico, donde venimos del animal y el estadío siguiente es el cyborg.
+
+\subsection{Los robots como armas militares
+}
+La creación de armamento letal controlado por máquinas con inteligencia artificial está creciendo. Conocidos globalmente con el término "robots asesinos", los rápidos avances en la materia están dando lugar a que estas armas sean más eficaces y exista una menor responsabilidad por su implementación, tanto en el campo de batalla como fuera de él.
+
+En la comunidad científica ya resuenan varios posibles desenlaces a este tipo de creaciones, algunos suenan desastrosos de pensar. Guillermo Simari, director del Laboratorio de Investigación y Desarrollo de Inteligencia Artificial de la Universidad Nacional del Sur, no es muy optimista con el escenario que plantea. Siendo uno de los investigadores argentinos más reconocidos en la materia, dice que "Cuando uno le quita el componente de peligro a la batalla, cuál es el problema de mandar miles de máquinas a combatir con otras miles de máquinas, se transforma casi en un juego de computadoras".
+
+La producción de diferentes robots con habilidades militares, creados bajo el argumento de la seguridad o la defensa de determinados ámbitos, nos demuestra que es posible el contexto trazado.
+
+La primera de las creaciones de este tipo se llama Atlas. Se trata de un robot entrenado para convertirse en bombero de rescate. Con una estructura humanoide de aluminio y titanio de 1,80 metros de altura, fue producido por la empresa Boston Dynamics, del grupo Google, en conjunto con DARPA.
+
+Otro de las variadas invenciones en el ámbito militar se destaca el robot humanoide ruso FEDOR (Final Experimental Demonstration Object Research). El androide, aunque fue creado en principio para tareas de rescate, igual que Atlas, busca como objetivo principal ser el único tripulante de una misión espacial programada para el 2021. Los ingenieros que lo entrenan, ya han reconocido que parte de su enseñanza constó en disparar armas con ambas manos de manera simultánea logrando una precisión milimétrica. Este robot recibió muchas criticas en cuanto a su creación, obligando a Dmitry Rogozin, viceprimer ministro ruso, a declarar que "No estamos creando un Terminator, sino inteligencia artificial que será muy importante en campos variados". Aunque su comentario antecesor fue algo desafiante en sus redes sociales, diciendo "robots luchadores rusos, unos tipos con carácter de acero".
+
+Estos robots no pasan por alto en la comunidad internacional, una carrera armamentista global es prácticamente inevitable y reemplazar a los soldados humanos por máquinas es bueno para reducir las bajas, pero malo al reducir el umbral de inicio de un ataque bélico plantean algunos desde una postura equilibrada.
+
+Entre las posturas a favor de la implementación de esta tecnología, tenemos la del profesor especialista en robótica Ronald Arkin, del Instituto de Tecnología de Georgia. Él plantea que los robots soldados, los tanques no tripulados y los aviones autónomos permitirán salvar muchas vidas de soldados y también de civiles, porque responderán a las acciones del campo de batalla más rápido y con mayor precisión.
+
+Por su parte, algunos desarrolladores de estas tecnologías, han empezado a tomar conciencia. Esto no significa que detuvieron sus investigaciones, sino que han puesto mayor hincapié en los puntos débiles de la misma que pueden resultar en la creación de un Terminator. La caja negra de las redes neuronales no es un punto menor en una máquina de acero construida para matar. Por este motivo, el ejército de Estados Unidos quiere asegurarse de no depositar una confianza ciega en los algoritmos. DARPA que explora nuevas tecnologías, está financiando varios proyectos que intentan que la inteligencia artificial rinda cuentas de lo que hace. Siendo así que, ahora se requieren respuestas y los científicos avocados al estudio de este tema, ya no podrán hablar de "magia" para mencionar lo que ocurre en las capas intermedias de estas redes.
+
+Pero la postura que se opone al uso de la tecnología con estos fines es mayoritaria. Por este motivo, existe una cruzada denominada Campaign to Stop Killer Robots, de su traducción "Campaña para Detener a los Robots Asesinos". La coalición internacional reúne a ONG de distintos lugares del mundo, bajo la coordinación del Observatorio de los Derechos Humanos con el fin de lograr, de manera organizada, sumar esfuerzos en el campo investigativo para lograr una prohibición preventiva de este armamento. En diversas cartas abiertas, esta ONG habló de estos riesgos y remarcó que, es importante prohibir armas robotizadas que usen la inteligencia artificial y disparen por decisión propia. También esbozó que uno de los principales peligros es que, a diferencia de las armas nucleares, estos sistemas autónomos no son costosos y las materias primas no son difíciles de obtener, por lo que serán muy económicos de producir a gran escala por parte de las potencias militares.
+
+Frente a tanta presión de la oposición y al creciente peligro de estas armas, la ONU realizó diversas reuniones de expertos para avanzar en un tratado que prohíba el desarrollo de armamento robótico con capacidad para decidir a quién atacar.
+
+Planteando los desafíos tecnológicos, militares, éticos y legales que implican los denominados robots "asesinos", capaces de operar sin instrucciones humanas. Argentina es uno de los 19 países que se expresó en contra del uso de sistemas armamentísticos autónomos letales.
+
+\section{Los mismos sistemas serán hackers}
+La llegada de nuevos sistemas con elevada inteligencia, no solo afectará la relación de la tecnología con el ser humano; sino que también lo hará internamente en la interacción entre sistemas. Un hacker lo podemos definir como una persona experta en el manejo de computadoras, que se ocupa de la seguridad de los sistemas y de desarrollar técnicas de mejora. Pero esta definición, rápidamente vemos que deberá ser reformulada. En esta ocasión, no con la idea de sacarle el aspecto negativo, como se hizo en una primera modificación. La búsqueda, deberá ser la de quitarle la exclusividad con la que actualmente cuenta al hablar de una persona.
+
+Es cada vez más habitual ver los sistemas interactuando y compitiendo entre si. Esto no queda atrás en el ámbito de la ciberseguridad, donde son cada vez más los casos del desarrollo de herramienta de hacking.
+
+Un caso concreto, sobre el avance de este tipo de tecnologías, se vio en el Cyber Grand Challenge. Un desafío creado por DARPA, para desarrollar sistemas de protección automáticos capaces de razonar sobre fallas, formular parches de seguridad y aplicarlos en una red en tiempo real.
+
+El objetivo de este reto es, lograr acelerar las técnicas de ciberseguridad realizadas hasta el momento de forma artesanal, buscando actuar a la velocidad y escala de la máquina. Estos sistemas podrían revertir el status quo dominado por los atacantes, pudiendo corregir las vulnerabilidades que tienen, desde electrodomésticos hasta las principales plataformas militares. Obligando, estas inteligencias artificiales, a adquirir diversos enfoques innovadores a los cazadores de errores profesionales, los programadores de seguridad y otros profesionales de la seguridad desarrollándose en una variedad de disciplinas, incluida la seguridad informática aplicada, el análisis de programas y la visualización de datos.
+
+En la competencia, se puso a prueba a siete supercomputadoras, que se enfrentaron entre sí para demostrar que las máquinas pueden encontrar y corregir vulnerabilidades de software.
+
+Lo llamativo del concepto, no es la creación de un sistema que descubre fallas y debilidades en otros sistemas, sino la intención con la que es utilizada para lograr los distintos resultados. Aquí los ciberdelincuentes pueden emplear estas herramientas para descubrir puntos débiles de software, previamente desconocidas, y luego explotarlas para mal.
+
+Es así que, a diferencia de un ser humano, la inteligencia artificial puede hacer ésto con la eficiencia de la máquina. Dado que, los hackers consumían mucho tiempo para desarrollarse, podrían convertirse en productos baratos en este escenario de pesadilla.
+
+Por su parte, David Melski, vicepresidente de investigación de GrammaTech, resalta los aspectos positivos de este avance. Sin embargo, hace algunas salvedades, planteando que "el descubrimiento de vulnerabilidades es una espada de doble filo". Su empresa, creadora de una de las supercomputadoras participantes, ahora está considerando usar esa tecnología para ayudar a diferentes proveedores a prevenir fallas en sus dispositivos conectados a la red o a fortalecer la seguridad de los navegadores web.
+
+Por otro lado, Justin Fier, director de ciberinteligencia de la empresa de seguridad Darktrace, resalta el potencial del uso de este tipo de inteligencias, pero rescata que es sólo cuestión de tiempo antes de que los hackers eventualmente mejoren su arsenal y señala que parece que estamos entrando en un mundo de guerra cibernética máquinas versus máquinas.
+
+
+\section{La inteligencia artificial con domino económico
+}
+La economía, en la actualidad, presenta mucha inestabilidad en cuanto a su predicción, grandes potencias mundiales con los mejores economistas viven crisis inesperadas por los cambiantes escenarios bursátiles.
+
+En este contexto, debemos adentrarnos en las teorías económicas, más precisamente, la teoría de la elección racional para comprender las ventajas y peligros que resultan de la implementación de inteligencia artificial. La hipótesis nos indica que, un individuo o agente racional tiende a realizar la mejor elección posible, en función de sus propios intereses, buscando maximizar su beneficio y a reducir los costos o riesgos de dicha determinación. Para tomar la mejor decisión, observará las preferencias, las limitaciones, las oportunidades percibidas y la información disponible.
+
+Si bien, esta teoría de la racionalidad tiene sus propios límites, los seres humanos no tenemos la mente clara. Nuestra naturaleza emocional lleva a la inconsistencia en la toma de decisiones. Dado que como individuos somos victimas de percepciones que, a menudo, están sistemáticamente distorsionadas por restricciones cognitivas, como exceso de confianza o ilusiones ópticas, entre otras situaciones. Adicionalmente, podemos resaltar que, las personas no siempre tenemos en cuenta toda la información disponible simplemente porque, como han demostrado varios estudios, nuestros cerebros no están equipados para hacerlo.
+
+Pero, si lográramos que toda la teoría económica basada en la racionalidad pudiera aplicarse a una inteligencia artificial y formara parte del complejo juego financiero, difícilmente una persona podría tener probabilidades de salir exitoso.
+
+Es por esto que, los sectores económicos empezaron a prestar cada vez más atención a este tipo de tecnologías, dado que las teorías del diseño normativo de la economía pueden ser mejor ejecutadas por los agentes artificiales que para los humanos. Surgiendo de esta manera, lo que hoy conocemos como "high-frequency trading", que es un tipo de trading que se realiza en los mercados financieros utilizando potentes ordenadores y algoritmos de forma automatizada. Los mismos compran y venden acciones a una velocidad vertiginosa, permitiendo realizar miles de operaciones en fracción de segundo.
+
+La transición de "homo economicus" a "machina economicus" se convierte en una tendencia cada vez más marcada.
+
+El grado de desarrollo de los sistemas no tiene techo, previéndose la posibilidad de reformular algunas teorías mercantiles y la eventualidad de un marco financiero especialmente diseñado para estos sistemas. Por lo pronto, factores como la ausencia de sentido común, el conocimiento cultural y el razonamiento moral en los agentes artificiales tampoco es probable que se resuelva en el corto plazo. Construir una mejor visión para ver nuestra vida real puede requerir la combinación de esfuerzos de los seres humanos y la inteligencia artificial, ya que ambos comparten ventajas y límites. La búsqueda de una mente racional es aún un largo camino.
+
+\section{Los sistemas desarrollan su propia ética y moral
+}
+Este punto, es uno de los más complejos de abordar y, como expondremos en los próximos capítulos, el eje del desconcierto legislativo a nivel mundial.
+
+Para estudiar esta materia, debemos tener en cuenta la existencia de variados debates filosóficos intentando interpretar que es el bien y que el mal, y de los distintos grados del mismo. Donde podemos notar que hay diversas culturas, costumbres, ideologías y dogmas que hacen que varíe entre los sujetos. En estos escenarios, el desarrollo de la moral o creencia, deberá sortear los problemas típicos que tenemos los seres humanos al plantear esta temática. Siendo central la idea de considerar absolutas nuestras creencias, pensando que los demás opinan como nosotros y la convicción de que, para estar adaptado a una sociedad hay que adoptar obligatoriamente sus creencias morales.
+
+Es así que, para reducir las confusiones, se debe definir la "moral". Pudiendo señalarla como un conjunto de normas, creencias, valores y costumbres que dirigen o guían la conducta de las personas en la sociedad. La moral permite distinguir qué acciones son correctas y cuáles son incorrectas.
+
+A este concepto, para completarlo le añadimos el de "ética". Ésta la definimos como conjunto de normas morales que rigen la conducta de la persona en cualquier ámbito de la vida.
+
+Ambas nociones, por más confuso que resulte, son diferentes. Donde la moral nace de la sociedad, siendo un conjunto de normas instituidas en el seno de la misma y cómo ellas, ejercen una poderosa influencia en el comportamiento de los individuos que la componen. En tanto, la ética nace del interior de una persona como resultado de su propia reflexión y su propia elección.
+
+Ésto nos pone ante un problema que excede la complejidad técnica, como lo es determinar cuál es la información que se le debe brindar a una inteligencia artificial o cómo esta puede interpretarlo. Siendo todo un dilema, ya que los seres humanos no podemos establecer socialmente una única moral, mucho menos podemos exigirle eso a un programador estableciendo un conjunto de algoritmos.
+
+Para graficar este conflicto ético, la filosofa inglesa Philippa Foot ideó el "dilema del tranvía", una situación que posteriormente, Judith Thomson perfeccionó en un segundo caso.
+
+En el primer supuesto, plantea que, circula un tranvía fuera de control por una vía. En su camino se hallan cinco personas atadas. Afortunadamente, un sujeto puede evitar esas muertes accionando un botón que encaminará al tranvía por una vía diferente, por desgracia, hay una persona atada a ésta otra. ¿Debería pulsarse el botón?
+
+Exponiendo un segundo caso, suponemos que hay una sola vía con cinco personas. El sujeto para detener el tranvía sólo puede hacerlo lanzando un gran peso delante del mismo y a su alrededor sólo se halla una persona con un físico grande; de este modo, la única manera de parar el tren es empujar sujeto acabando con su vida para salvar otras cinco. ¿Qué debe hacer el sujeto?
+
+Como vemos en estos dos casos, es difícil tomar una postura, dado que es complejo participar activamente en la muerte de una persona, aunque esto evite cinco muertes. Por su parte, resulta relevante la forma, dado que en el primer caso es cuestionable la omisión de auxilio y la mayoría opta por presionar el botón, en tanto, en el segundo caso la generalidad de la gente decide no empujar a la persona, no teniendo siempre "intuiciones utilitarias".
+
+Ante estos dilemas, cómo haremos para no cuestionar las decisiones que tome una inteligencia artificial. Los vehículos autónomos están siendo observados por toda la sociedad para ver que resoluciones éticas toman, siendo eje de polémicas y dando lugar a declaraciones como la de uno de los directivos de Mercedes-Benz, quien señaló que, "si hay que escoger entre salvar la vida de un peatón o del conductor, el coche debe salvar al conductor".
+
+Es así que, actualmente se nos presentan estas situaciones, pero pronto aparecerán supuestos de ciencia ficción. No sería desatinado pensar que, el día de mañana, casos como el de la novela "Yo, robot" del escritor y científico ruso Isaac Asimov, sean comunes. Parte del relato cuenta de un robot de rescate que le salva la vida a un hombre adulto, en lugar de una niña. La decisión la tomó mediante el cálculo de estadísticas que obtuvo de la comparación de signos vitales, sin considerar que la niña es más indefensa y tiene más situaciones pendientes por experimentar de vida. Esto genera un conflicto ético en el sobreviviente, siendo parte de la trama de dicha narración.
+\subsection{Las tres leyes de la robótica
+C}
+En este punto nos encontramos con un gran referente en este tema. Isaac Asimov, desarrolló en su obra, lo que es hoy en día, la base de los intentos de legislar la ética robótica con "las 3 leyes de la robótica".
+
+Las mismas, si bien son conocidas como "de la robótica" de forma genérica, pueden aplicarse en cualquiera de los ámbitos de la inteligencia artificial. Las leyes nacieron del universo de la ciencia ficción, en un contexto donde los autómatas debían convivir con los seres humanos siguiendo ciertas reglas que les significaría una especie de código moral del robot.
+
+La primera vez que se las mencionó fue en el relato "Círculo vicioso" (Runaround) en el año 1942, indicando los siguientes lineamientos:
+
+Un robot no debe dañar a un ser humano o, por su inacción, dejar que un ser humano sufra daño;
+Un robot debe obedecer las órdenes que le son dadas por un ser humano, excepto si estas órdenes entran en conflicto con la Primera Ley;
+Un robot debe proteger su propia existencia, hasta donde ésta protección no entre en conflicto con la Primera o la Segunda Ley.
+A estas tres leyes, para perfeccionar su concepto, Asimov introdujo en su libro "Robots e Imperio" del año 1985, una cuarta norma, denominada como la "Ley Cero de la Robótica", con el siguiente enunciado:
+
+Un robot no puede causar daño a la humanidad o, por inacción, permitir que la humanidad sufra daño.
+La finalidad de estas leyes es, evitar que el ser humano sienta temor frente a la posibilidad de que las máquinas pudieran tomar la decisión de rebelarse contra la humanidad. De esta forma, con las reglas como la base de su programación, cualquier intento de desobediencia del robot significaría la destrucción del cerebro positrónico del mismo.
+
+Si bien, actualmente son de gran consideración, los científicos han valorado siempre por su gran coherencia y lo adaptable que se muestran al desarrollo científico del contexto de estos tiempos. De todas formas, no se descarta la necesidad de algún tipo de corrección o perfeccionamiento, dado que es posible que, no abarque todas las opciones que se pueden presentar, puesto que, como marcaba anteriormente, las mismas novelas de Isaac Asimov, planteaban escenarios con situaciones complejas de resolver para el robot, que lo llevaba a interpretar, por ejemplo que los seres humanos somos el peor peligro para nosotros mismos y que tome medidas contra nuestra libertad para no violar la primera ley.
+
+Sin embargo, más allá de la efectividad de las leyes, el gran problema es, cómo enseñarle a una inteligencia artificial que debe cumplirlas sin cuestionamientos. Dado que, ya no estamos hablando de programas, sino también una evolución en base al aprendizaje. De esta manera vemos que, nos encontraríamos con 2 problemas:
+
+La tecnología: la inteligencia artificial que refleja Asimov es mucho más rígida que la tecnología real que se está desarrollando en la actualidad, fundada en redes neuronales con sistemas de aprendizaje basados en machine learning o deep learning;
+La libertad: los seres humanos somos fundamentalmente libres. Ésto lleva a que, en muchas ocasiones no se sigan las leyes, ni siquiera las leyes éticas básicas, como no matar o no robar. Por este motivo, debería inculcarse que, las leyes deben cumplirse, no por que devendrán consecuencias negativas, sino porque decidan hacerlo.
+Al no poder programarles las leyes, solo quedará intentar forjarles en la base de su proceso de aprendizaje, al igual que se hace con los niños, los valores éticos de la humanidad. De forma tal que, al momento de conseguir estas inteligencias un nivel de desarrollo superior, tengan "valores" que les indiquen que no deben atentar contra sus creadores.
+
+
+
+\chapter{Los veintitrés principios de Asilomar
+}
+La ciudad de Asilomar en California (EE.UU.) recibió a principios del año 2017 la reunión denominada Conferencia Asilomar, organizada por la iniciativa Future of Life Institute.
+
+Con el propósito de intentar que el desarrollo de estas tecnologías beneficie al mundo en lugar de destruirlo. Estos principios surgieron como una lista de recomendaciones que abarcaban, desde estrategias de investigación hasta derechos de datos y cuestiones futuras, incluida la súper inteligencia potencial.
+
+La lista de principios no es rígida y da lugar a diferentes interpretaciones, pero su principal objetivo es concientizar que determinadas conductas actualmente cotidianas podrían ir en contra del espíritu de esta iniciativa. Dicho documento ha sido apoyado por más de 1.200 figuras relacionadas con la innovación tecnológica y científica como Stephen Hawking y Elon Musk, junto a más de 800 investigadores especializados en inteligencia artificial.
+
+Compuesto por una estructura dividida en tres temáticas, que comprenden cuestiones de investigación, ética y valores y problemas a largo plazo, el documento plantea lo siguiente:
+
+La primera de las temáticas trata cuestiones de investigación. Aquí diseña como objetivo la creación de inteligencia artificial beneficiosa para el ser humano. Buscando el compromiso de generar un diálogo constructivo de los investigadores con los legisladores, para la creación de una normativa acorde a las buenas practicas; y entre los mismos investigadores, evitando competir entre grupos, para lograr en equipo mejorar los desarrollos y seguridad de los sistemas.
+
+El segundo punto regula la ética y valores. Estableciendo puntos de la seguridad y transparencia de los sistemas autónomos, que permitan determinar la causa de los posibles daños efectuados por estos y una explicación satisfactoria de la decisión tomada.
+
+También plantea temas de responsabilidad, siendo los desarrolladores los encargados de las implicaciones morales de su uso. Exigiéndoseles que, la inteligencia artificial, debe poder alinearse con los valores humanos, siendo compatibles con los ideales de dignidad, derechos, libertades y diversidad cultural.
+
+En tanto, también indica que la carrera armamentista debería ser evitada, impidiéndose la creación de armas autónomas letales.
+
+Para concluir con el tercer punto, están los problemas a largo plazo. Planteando que, si bien no hay consenso sobre la llegada de una súper inteligencia artificial (ASI), igualmente debería planificarse por el riesgo que podría representar. Buscándose medidas de control y seguridad para aquellas inteligencias artificiales que pueden mejorarse a si mismas y la generación de valores éticos para conseguir que este desarrollo sea empleado para el bien común.
+
+
+
+\chapter{La defensa en juicio de los robots}
+La autonomía de los sistemas provoca que se generen diferentes situaciones en distintos lugares. Las mismas, ya no necesariamente ocurrirán por acción u omisión de una persona, sino que podría hacerlo por la de un robot. Pero, si ocurre un accidente, cómo sabremos si se trato de un error humano o una falla del sistema; y en tal caso si se tomaron las medidas correspondientes para mitigarlo.
+
+Es así que, en la actualidad, con gran parte de la industria trabajando con estas tecnologías surgen nuevos cuestionamientos a los cuales ya se les ha encontrado una respuesta viable. Por este motivo, frente al interrogante de, ¿qué ocurriría si hay un accidente en el que, ningún ser humano pueda aclarar que pasó? ¿Quién podrá proteger al automóvil autónomo, a un robot policía, a un androide que realiza cuidado de mayores con problemas cognitivos o cualquier interacción con los seres humanos que tenga un desenlace indeseado?
+
+De esta forma, los expertos en robótica plantean la implementación de una "caja negra ética". Como ocurre en los aviones y en algunos tipos de embarcaciones, dicho sistema nos permitirá determinar los detalles del acontecimiento y el grado de culpabilidad humano y del sistema. Recogiendo información sobre las acciones que estaban realizando en el momento del suceso o datos sobre lo que captaron con las cámaras, micrófonos o sensores que pueda llegar a tener asociados la inteligencia artificial.
+
+Esta caja negra, si bien es igual a la que se emplea en otros medios, denomina "ética" porque, mediante ella, podemos chequear las decisiones que tomó la inteligencia artificial y así constatar que valores ha aprendido el sistema en su proceso de capacitación. Siendo así que, si un vehiculo inteligente va por la calle y se le cruzan personas por delante, el sistema de valores aprendidos es el que determina su comportamiento. Optando si la elección más ética es, poner en riesgo la vida de sus pasajeros haciendo una frenada peligrosa para evitar el accidente o protegerlos a toda costa, haciendo una maniobra menos efectiva para salvar la vida del peatón.
+
+De esta manera, el juez tendrá disponible con detalle, un informe completo respecto a las decisiones tomadas por el robot, como así también lo ocurrido en el entorno.
+
+Por ultimo, y para evitar confusiones de terminologías, esta "caja negra ética" no debe confundirse con el concepto de "caja negra" anteriormente desarrollado. Dado que, de manera coincidente ambos se llaman de forma similar, pero no están asociados, ya que uno es el misterio de la toma de decisiones dentro del sistema y otro es un dispositivo que recolecta y registra información respecto a las conversaciones, maniobras y actos que llevaron a tomar una decisión mientras se está operando un medio.
+
+
+\chapter{Marco regulatorio para la inteligencia artificial}
+Comprendiendo el grado de desarrollo que ha alcanzado este tipo de tecnología y la problemática que puede llegar a resultar en diferentes contextos. Tenemos la posibilidad de concentrarnos en el enfoque legal por sobre el aspecto técnico-informático. De esta forma, cobra sentido el estudio de los distintos intentos de regular la creación y comportamiento de las distintas inteligencias artificiales.
+
+Pero la gran pregunta es ¿cómo enfocarnos? Será factible creer que la ética robot es algo de ciencia ficción y que podrá solucionarse fácilmente en la vida real, cargando un par de instrucciones. Están en lo correcto quienes creen que el "truco" se encuentra en preveer todos los panoramas posibles para que las reglas precargadas no tengan contradicciones y sean autosuficientes.
+
+Son realmente las redes neuronales tan impredecibles en su aprendizaje y toma de decisiones como un cerebro humano; y en tal caso, había que darle derechos civiles a estas nuevas entidades. Este último pensamiento, también desligaría de responsabilidades a los dueños de dichos sistemas, pudiendo alegar que "fue mi inteligencia artificial, no fui yo" y justificarse diciendo que lo aprendió por sí sola, lo cual sería un desastre.
+
+Frente a estos interrogantes, y determinar cuales son los aspectos legales con los que nos podemos encontrar en un futuro, parece interesante la visión de Peter Asaro. Filósofo de ciencia y tecnología, estudioso de las dimensiones éticas de los algoritmos y los datos. Él divide la ética de la robótica en tres categorías:
+
+Los sistemas éticos integrados en robots;
+La ética de las personas que diseñan y usan robots;
+La ética de cómo la gente trata a los robots.
+Afín con este estudio. La especialista suiza Daniela Cerqui. Experta en las relaciones entre la sociedad y los procesos de tecnología de la información, robótica, entre otros. Examino los distintos comportamientos e ideas de la comunidad de investigación en robótica, dividiendo la ética del robot en tres actitudes:
+
+No interesado en la ética: que las acciones del robot son solo técnicas, no creen que el robot participe en la implementación de tareas de responsabilidad social y moral;
+Interesado en cuestiones éticas a corto plazo: enfocados en el buen o en el mal juicio moral que involucre los valores culturales y las tradiciones sociales;
+Interesado en cuestiones éticas a largo plazo: Preocupado por cuestiones de ética de robots a largo plazo y a nivel mundial.
+De esta manera, en el centro del debate, tenemos como punto más ambicioso a nivel legislativo, el Código de ética sobre robots, basada en la relación humano-máquina. Líneas de conducta para humanos y robots, encaminadas a la protección de ambos. Sumado a otros conceptos, como lo son las regulaciones que pueden afectar al trabajo humano, con tipos de impuestos a los sistemas para cubrir el déficit fiscal y afrontar eficientemente la asistencia social. En tanto, a un nivel más bajo y probablemente con una resolución próxima, las normas que introduzcan en un marco jurídico a los vehículos autónomos, que ya son una realidad.
+
+
+
+\section{Corea del sur, el precursor de la escena regulatoria
+}
+El país de Asia Oriental, es una de las grandes potencias tecnológicas del mundo. La republica de Corea, es el lugar de origen de grandes empresas como Samsung, LG, Kia, Daewoo, Hyundai, entre otras tantas. Por este motivo, debemos prestar atención a un mercado tecnológicamente muy activo. Frente a ésto, el Ministerio de Comercio, Industria y Energía, mediante un órgano como la Comisión de ética de robots, creada específicamente para el tratamiento de esta temática, elaboró la "Carta de Ética Robótica" o "Robot Ethics Charter".
+
+Presentada como borrador en 2007 y concluida en 2012, establece que los humanos y robots deben proteger la dignidad de la vida, la información y la ética de la ingeniería. Entre sus puntos de estudio, la misma prestó especial atención a las tres leyes de la robótica descriptas por Asimov. La realidad toma unas leyes que, no dejan de ser un producto de la ficción que, considera a los robots como seres con autoconsciencia, algo que por ahora no es una realidad.
+
+Estructurada en tres grandes ejes, como lo son: los estándares de fabricación, derechos y responsabilidades de los usuarios o propietarios y los derechos y responsabilidades de los robots. En su esencia, la Carta, es concebida con la percepción que los países orientales tienen de la inteligencia artificial y la robótica, la cual difiere de Europa o Estados Unidos, donde allí son sinónimo de mejor calidad de vida y no como amenazas o peligro como en el mundo occidental.
+
+Adentrándonos en las regulaciones del documento. Podemos comenzar con los estándares de fabricación, planteando que la autonomía sea limitada. El robot debe tener un diseño ecológicamente sustentable y calidad de fabricación acorde para evitar que el usuario sufra cualquier tipo de daño físico; como así también un comportamiento adecuado para evitar un daño psicológico de quien lo emplee. Además de que, los robots como productos, tengan un sistema de identificación inalterable. Manejo de datos cifrado que proteja la información personal. En tanto, los mismos deben ser rastreables en todo momento, en el mundo real como así también toda su actividad en línea.
+
+Por otra parte, están los derechos y responsabilidades de los usuarios o propietarios. Los mismos tienen la potestad de tomar el control de su robot, para utilizarlo sin riesgo o temor de daño físico o psicológico. El resguardo legal que le garantiza que el autómata resguarda sus datos personales y otra información sensible y de esperar que realice cualquier tarea para la que haya sido diseñado explícitamente. Mientras que, son responsables por el uso que exceda lo "justo" y "legal" dentro de los parámetros de la ley. Como en caso de concreción de un acto ilegal, causar daño físico o psicológico a un individuo o si no tomó las "precauciones razonables" para garantizar que su robot no represente una amenaza para la seguridad y el bienestar de las personas o sus bienes. En tanto, cualquier persona, sin importar si es dueño o usuario, tiene responsabilidad bajo la ley coreana por dañar o destruir un robot por acción u omisión grave.
+
+Por último, vemos que los robots también tienen derechos y responsabilidades en esta Carta. Planteando que, los robots podrán existir sin temor a lesiones o muerte y vivir una existencia libre de abuso sistemático. Mientras que les es exigible, que no produzca daño a un ser humano, ya sea por acción o por inacción. Debe obedecer órdenes que le den los seres humanos, excepto que sea causar daño a otro ser humano. Y por ultimo, tiene prohibido engañar a un ser humano.
+
+La Carta de Ética robótica, más allá de que fue concluida en 2012, se encuentra continuamente en proceso de evolución, dado que, como veremos con otros países, el desarrollo tecnológico está exigiendo algunos ajustes que deberá acompañar legislativamente.
+
+Otra ley con la que cuenta Corea, es la "Ley de promoción de desarrollo inteligente y distribución de robots" o "Korean law on the development and distribution of intelligent robots". Esta legislación también busca contribuir a mejorar la calidad de vida de los ciudadanos y la economía nacional. Estableciendo y promoviendo una política para el desarrollo sostenible de la industria y facilitar el desarrollo y la distribución de robots inteligentes. Orientándose la misma a la industria y promoción de las nuevas tecnologías.
+
+Como contra partida, Corea también tiene en cuenta la posibilidad de que la automatización deje a los seres humanos sin sus puestos de trabajo. Por lo tanto, presentó el primer impuesto mundial sobre robots. El mismo, no recae directamente en los robots sino que, es una reducción de los beneficios de deducción fiscal que, mediante la ley de desarrollo, el gobierno le proporciona a las empresas para la inversión en infraestructura destinada a impulsar la productividad.       
+
+Para concluir, debemos ver que la urgencia legislativa en Corea, como en casi todas las naciones, pasa por los vehículos autónomos. Ya que, se encuentra muy avanzado con esta tecnología, a tal punto que se construyo K-City. Una ciudad artificial de más de 360.000 m² repleta de curvas, semáforos, señales de tránsito, carriles de colectivos, zonas de estacionamiento, jardines y autopistas para testear todo tipo de escenarios. Allí empresas las automotrices y de tecnología realizan pruebas diariamente, capacitando a las redes neuronales de sus vehículos para poder lograr un mejor rendimiento.
+
+\section{Japón y sus ambiciosos proyectos de legislación ética}
+Luego de la iniciativa de la "Carta de Ética Robótica" de Corea del Sur. En 2007, por su parte, Japón accede a desarrollar una reglamentación similar con el propósito de garantizar que los robots siempre estarán bajo el control humano. El mismo fue un borrador, conocido como "Guía para asegurar la sana conducta de la próxima generación de robots", de su traducción del inglés como "Guidelines to Secure the Safe Performance of Next Generation Robots".
+
+Este documento ha quedado como un importante precedente del tratamiento del tema por la industria, investigadores y abogados con el fin de elaborar una ley que satisfaga este propósito.
+
+Si bien, no llegó a convertirse en ley, el proyecto se destacó entre otros que se habían presentado. El instrumento se diferenciaba de la Carta de Ética Robótica de los coreanos, en que buscaba adquirir con sus definiciones mucha más precisión en cuanto al establecimiento de pautas para el uso seguro de los robots. Un primer borrador del documento sugiere que todos los robots reportan incidentes de lesiones humanas causadas por ellos u otros robots, a una base de datos central. Además, Japón espera que todos los fabricantes cumplan con las directrices de funcionamiento de los sistemas para poder habilitar su uso comercial y la ansiada inserción al mercado.
+
+En tanto, en 2015 aparece, en el marco de la reunión para la Revitalización Económica de Japón, la "Nueva Estrategia para Robots" o Robot New Strategy. Tratándose de un proyecto central en la futura táctica de crecimiento. Aquí el Primer Ministro subrayó que, mediante una fusión entre las tecnologías de la información y robots, estamos ingresando en una nueva era en la que el estilo de vida de las personas y la industria enfrentan cambios dramáticos. Por este motivo cree que esta estrategia, presentará un "punto de partida de la revolución del robot" por el que Japón pueda brillar en el mundo.
+
+\section{China: el gigante desregulado}
+Si bien la República Popular China no ha presentado una gran cantidad de documentos relacionados con el tema hasta 2017. En ese año, decidió recuperar el terreno perdido mediante el "Plan de desarrollo de una Nueva Generación de Inteligencia Artificial" presentado por el Consejo de Estado.
+
+El mismo tiene como objetivos: hacer crecer la industria de la inteligencia artificial, crear un nuevo ciclo de incremento económico que fomentará el bienestar social y aumentará la fortaleza de la defensa y la seguridad nacional.
+
+Para esto, planea establecer y fortalecer leyes y reglamentos para un desarrollo sustentable y transparente de estas tecnologías dentro de un marco ético. Además, participará activamente en la gobernanza internacional de la inteligencia artificial para contribuir a enfrentar los desafíos globales. Endurecerá, por su parte, los castigos por el uso indebido de datos, la invasión de la privacidad, la violación de la conducta moral y ética.
+
+Respecto al desempleo, también prevé la reducción de las fuentes laborales, enfrentándolo con el desarrollo de una legislación que aliente a las empresas a capacitar a los trabajadores en riesgo. De esta forma, planean recolocarlos en los nuevos puestos de trabajo que surgirán como consecuencia de la implementación de las nacientes tecnologías. Apoyarán más activamente la formación profesional y la educación superior, para crear mano de obra altamente cualificada y empleos de calidad.
+
+Otro punto a considerar es, la promulgación de normas tecnológicas que creen una estructura de derechos de propiedad intelectual y un mecanismo de supervisión más efectivo en el nuevo contexto tecnológico. Para concluir, el plan tiene como objetivo a largo plazo el de movilizar a toda la sociedad a participar activamente y apoyar el desarrollo de este tipo de sistemas
+\section{Unión Europea: un completo proyecto conjunto}
+El proyecto más destacado, por fuera de Asia, lo podemos encontrar en la Unión Europea. El bloque europeo firmó en 2016 el primer texto respecto a los vehículos autónomos con inteligencia artificial en la "Declaración de Ámsterdam sobre cooperación en el campo de la conducción automatizada y conectada". El documento trazaba el objetivo de promover para 2019 un marco normativo acorde para este tipo de tecnología. Además, deberá incluir cuestiones como la privacidad y la protección de datos. En tanto, la Comisión Económica de las Naciones Unidas para Europa (UNECE) reformó, en parte, la Convención de Viena sobre tráfico rodado, actualizando nuevamente el texto originado en 1968, con las adaptaciones necesarias para incluir a las nuevas tecnologías en este contexto.
+
+Por otro lado, lo que respecta a temas más complejos como la ética robótica y el diseño de sistemas, contaba con ciertas normas orientadas a la estandarización de patrones industriales donde se emplea la robótica, pero carecía de leyes que regulen la interacción social entre seres humanos y autómatas. En el año 2007, siguiendo el impuso coreano, el Centro de Investigación Europeo de Robótica también intentó preparar un código de pautas y conductas respecto al uso de robots, pero quedó en puras intenciones.
+
+Con una nueva oleada mundial de concientización sobre la necesidad de regular estos temas, surge otra vez la idea, pero en esta ocasión con más fuerza. Con este contexto, el Parlamento Europeo le ha solicitado, a principios de 2017, a la Comisión que proponga una legislación común para toda la Unión Europea en el ámbito de la robótica y la inteligencia artificial, para aprovechar al máximo su potencial económico y garantizar niveles equiparables de seguridad en la comunidad. La importancia de su rápida resolución, plantea el documento, se debe a la iniciativa de varios países extranjeros que están evaluando adoptar medidas normativas en esta área. Destacándose que, el bloque europeo debe ser precursor de estas regulaciones, para no verse obligada a seguir los principios establecidos por terceros países. Además que, algunos Estados miembros, han empezado a especular sobre la posible confección de normas jurídicas referentes a inteligencia artificial.
+
+De esta forma, junto con la solicitud a la Comisión, la Eurocámara lanzó las "Normas de Derecho civil sobre Robótica", también conocidas por su traducción European Civil Law Rules in Robotics. En donde analizaremos la Resolución del Parlamento Europeo, y algunos aspectos destacados del Proyecto de Informe. Expuesto por Mady Delvaux, la diputada y miembro de la Comisión de Asuntos Jurídicos del Parlamento Europeo, que impulso dicha Resolución.
+
+\subsection{Los robots deberán tener un interruptor de emergencia
+}
+El primer punto a tener en cuenta es, la seguridad de convivir con estas máquinas, demasiadas visiones apocalípticas surgen de los relatos fantásticos y los pronósticos de los analistas de la realidad científica. En este sentido, es necesario vigilar cualquier escenario que pueda llegar a proporcionar peligro a los seres humanos. El desarrollo de sistemas hace que la inteligencia artificial pueda aprender debido al entrenamiento, por lo que cualquier situación de riesgo que se pueda producir debe ser evitada con un interruptor de emergencia.
+
+Por este motivo, los diseñadores deberán integrar mecanismos de salida evidentes, denominadas como "teclas de interrupción de urgencia" que deberán ser coherentes con los objetivos de diseño razonables.
+
+Como podemos notar, y hasta la misma Resolución lo marca, Las Tres Leyes de la Robótica de Isaac Asimov han sido utilizadas como referencia. Esto no es ninguna novedad, ya que las legislaciones asiáticas enfocadas en la interacción hombre-robot también la han utilizado.
+
+Es por esto que, el novedoso botón de apagado de la inteligencia artificial, podemos decir que se encarga de respaldar el concepto de la primera ley de la robótica, que en su parte inicial señalaba que, un robot no debe dañar a un ser humano. En un contexto real, un interruptor podría ser la solución más efectiva para encarar esta dificultad.
+
+Las grandes empresas ya están teniendo esta regla como principio básico a la hora de desarrollar una inteligencia artificial y lo ha utilizado.
+
+Google sufrió el inconveniente con una la red neuronal empleada en el traductor, la que decidió crear su propio lenguaje oculto para intermediar en la traducción de distintos idiomas.Facebook pasó por la misma situación pero, a tal punto de tener que desconectar estos sistemas. En este ultimo caso, las inteligencias artificiales creadas eran "chatbots" con objetivo de brindar servicio de atención al cliente a los usuarios de la plataforma. Para probarlas, dejaron a dos máquinas de este tipo manteniendo una conversación libre entre sí. El resultado, fue completamente inesperado para los creadores dado que, las mismas implantaron un nuevo idioma. Los investigadores a cargo de este proyecto han declarado que, decidieron apagar dichos sistemas, no por miedo a que fuera el comienzo de una inteligencia artificial malévola, sino que, si deciden comunicarse en su propio lenguaje, el temor radicaba en la posibilidad de que perderían el control sobre ellas.
+
+\subsection{Los robots no podrán hacer daño a los seres humanos
+}
+
+Este concepto, complementa al anterior y se encuentra también inspirado en la principal Ley de Asimov, además de completar la primera propuesta por la Unión Europea. La robótica siempre tiene que ser pensada para ayudar y proteger a los humanos, por lo que no se permitirá la creación de máquinas cuyos fines sean destruir o dañar a las personas. Obviamente, esto sería muy cuestionado por las grandes potencias mundiales que, como vimos en uno de los capítulos anteriores, crean con supuestos fines defensivos, máquinas de guerra con inteligencia artificial.
+
+\subsection{No podrán generarse relaciones emocionales con los robots
+}
+El objetivo de esta norma es recordar a los humanos que, las inteligencias artificiales, no son capaces de sentir amor por nosotros, por lo que no debemos actuar diferente con ellas. Esta regulación es muy debatible, dado que resulta imposible considerar que una reglamentación pueda guiar las sensaciones o sentimientos de una persona.
+
+Las dificultades que presenta la regla, nace de un proceso cognitivo en los seres humanos que se denomina "pareidolia". El fenómeno psicológico, nos hace ver un rostro, una silueta, una figura humana o animal en cualquier sitio: en una nube, en las manchas de una tostada, en la forma en que están colocadas las puertas y las ventanas de un edificio, entre otro. Provocando sentimientos y emociones en las personas generando que, cuanto más antropomórfico sea un objeto, más lazos establecemos. A medida que los robots, los animales o cualquier objeto, tiene respuestas más próximas a lo que el humano espera, se desarrolla más afectividad con ellos y de eso se aprovecha en el diseño industrial y también en la robótica.
+
+Respecto a la problemática, la matemática y escritora española especialista en inteligencia artificial y robótica, Carme Torras Genís, analiza cómo será esta dependencia. Desarrollado varias teorías, surgidas del estudio de la relación entre las máquinas y el ser humano, la llevaron a destacar, como uno de los objetivos centrales, la educación de los programadores de robots sobre conceptos relacionados con la ética.
+
+En estas investigaciones, logró establecer una diferencia entre dos tipos de antropomorfismos, teniendo la física y la psicológica.
+
+En cuanto al antropomorfismo físico, nos indica que, si los robots tienen una apariencia similar a la de los seres humanos, mayor será la empatía y se facilitará la interacción con las personas. Obviamente, hacemos la salvedad del "valle inquietante", mencionado en anteriores capítulos, que atenta contra dicho acercamiento emocional por las diversas implicancias negativas antes indicadas.
+
+Por otro lado, tenemos el aspecto psicológico, presentándose de manera más compleja. Debido a que, las expresiones faciales emulan emociones y sentimientos que, por supuesto, no poseen, siendo más discutible y trayendo varios dilemas morales. Por ejemplo, el niño que interactúa con un androide, puede llegar a creer que este es su compañero de juegos y que le brinda afecto; o los ancianos con deterioro cognitivo pueden llegar a entender que el robot que los asiste se preocupa de verdad por su bienestar. Es así que, Carme Torras Genís plantea, la importancia de remarcar que los robots son herramientas y no hay que hacerlos más humanos de lo necesario. Remarcando que esta es una de las primeras cosas que habría que enseñar a los programadores.
+
+Evitando el reemplazo afectivo, usando el ejemplo anterior, la idea debería ser la de liberar al cuidador o al terapeuta de las tareas más rutinarias precisamente para que pueda dedicarse más a la parte afectiva. Uno de los principios básicos en ética es no engañar a las personas. Un robot humanoide, puede engañar a la persona que cuida y esta puede llegar a creer que el robot realmente se preocupa por su bienestar, cuando es mentira, y delegar en él todas las decisiones. Concluyendo la matemática y escritora con le frase "La especie más evolucionada del planeta morirá de un exceso de evolución".
+
+Por otra parte, en sentido contrario, el japonés Hiroshi Ishiguro, director del Laboratorio de Robótica Inteligente de la Universidad de Osaka. Dedicó muchos años desarrollando androides, y asegura que cada vez hay más avances respecto a la apariencia y a la interacción con las personas. Pero el próximo paso, y el más complejo, es reproducir las emociones que caracterizan a la raza humana. Una vez llegado ese día, será cuando las personas se enamoren de los androides.
+
+Es importante destacar que, la percepción de que los robots pueden llegar a ser una potencial amenaza para los humanos, se da especialmente en Europa y Estados Unidos, dado que se los vincula a investigaciones y proyectos militares, además de la forma en que las películas muestran esto avances. Por el contrario, señala Ishiguro, en Japón los robots son "nuestros amigos", y cree que pronto cambiaran los países occidentales de punto de vista, empezando a verlos del mismo modo, debido a la gran llegada de la cultura japonesa en estos lugares.
+
+\subsection{Los más grandes deberán tener un seguro obligatorio
+}
+ la hora de afrontar la responsabilidad civil sobre los actos de los robots, la Resolución diferencia los distintos tipos de inteligencia artificial, en especial destacando a los robots. La distinción se debe a que, no todos los sistemas tienen el mismo efecto o grado de peligrosidad para su convivencia. Siendo que, su tamaño y la actividad que desempeñan, un factor evidentemente determinante para considerar que, el empleo de algunos de ellos podría generaran un mayor riesgo de causar ciertos daños que otros.
+
+Por ello, la Unión Europea obligará a los dueños de los robots de mayor tamaño a realizar la contratación de un seguro. En este rango de inteligencias artificiales que requieren seguros, están obviamente incluidos los vehículos eléctricos de conducción automática.
+
+Considerando que ya ha habido un accidente grave con este tipo de tecnologías. Parece obvio suponer la existencia de un seguro obligatorio para robots y mecanismos autónomos y la necesidad de crear un fondo para que las víctimas sean debidamente indemnizadas.
+
+Por otra parte, aún falta determinar quien es responsable de un accidente o una muerte provocada por un robot. Si los fabricantes, los diseñadores de su software, su propietario o su distribuidor. Pero en estos momentos la prioridad absoluta es garantizar la protección y debida cobertura de las víctimas de este tipo de accidentes. Por lo pronto, si un vehículo autónomo en la actualidad colisiona con otro que se encuentra estacionado, debe responder la marca que lo programó. Siendo en el mismo marco normativo que cualquier objeto o cosa que produzca un daño a un tercero. Pero, cuando la ley contemple que haya una mínima inteligencia robótica, buscará recaer esa responsabilidad en ella, pudiendo considerarse parcial o totalmente responsable de sus actos u omisiones.
+
+También, y a largo plazo, la propia Delvaux señala la posibilidad de crear una personalidad jurídica a los robots, una especie de "personalidad electrónica" limitada, al menos en materia de compensaciones. Algo similar a lo que ocurre ahora con las compañías, pero no se trata de algo inmediato.
+
+Como contrapartida, es la federación europea de seguros y reaseguros, Insurance Europe, no ve como algo viable el seguro obligatorio. Dado que, sólo funcionaría en casos específicos y cuando se dan determinadas condiciones de mercado como la disposición de suficientes datos de siniestralidad, un elevado nivel de estandarización y una amplia capacidad aseguradora para gestionar los riesgos y cubrir los reclamos. Esta carencia es por, la falta de datos sobre los riesgos, la similitud entre los riesgos presentados por los diferentes tipos de robots e inteligencia artificial, y que el mercado de seguros en este área aún se está desarrollando. Remarcando que los esquemas obligatorios inapropiados son muy contraproducentes y en realidad dificultan la vida de las personas, las empresas y las aseguradoras.
+
+\subsection{Derechos y obligaciones para los robots
+}
+De los documentos considerados, nace la iniciativa de darle derechos y obligaciones a los distintos tipos de inteligencia artificial. Evaluando para ello, la creación de una personalidad jurídica especial para estas entidades tecnológicas que denominaremos "Personas electrónicas". Pero la palabra "persona" implica que existirán una serie de derechos que de otra manera ni se pensarían. El debate se encuentra en determinar específicamente cuáles serán estos derechos y obligaciones. Aunque, por el momento, parece centrarse la temática en lo referente a las obligaciones, donde los robots asumirán las consecuencias de sus actos, siendo total o parcialmente responsables junto a sus propietarios o creadores. Además, están obligados a poseer un número de inscripción individual que figure en un registro específico de la Unión Europea.
+
+Pero, hablar de derechos parece opuesto a la serie de planteos que vienen realizando el Parlamento europeo. En estas enunciaciones, notamos que, descarta cualquier posible derecho civil robótico pensado como lo podemos ver en el derecho civil humano. Dado que, parecería plantearse que los robots tendrán "derecho": a servir a los humanos, a ser identificados y marcados como robots, a ser apagados si no nos gusta su comportamiento o lo consideramos peligroso en cualquier modo, a ser una posesión, a ser calificado como una persona electrónica si es suficientemente inteligente y a eventualmente ganar dinero, pero solo con la finalidad de cubrir un desperfecto que él pudiese ocasionar.
+
+Además, queda de lado el tema de que un robot pueda defenderse en un juicio, cuando se le obligue a reparar algún bien que haya dañado. Previendo la aplicación de la responsabilidad objetiva para estos casos, donde únicamente la persona perjudicada deberá probar que se ha producido un daño y el establecimiento de un nexo causal entre el comportamiento del autómata y los daños causados, independientemente de toda culpa por parte de robot. Por este motivo, la Resolución indica que podrán conservar capital, pero no para su disfrute, sino para compensar a la victima en el supuesto de causarle un perjuicio.
+
+Es así que, solo se plantea desligar de obligaciones a las empresas o usuarios, remarcando que, en el actual marco jurídico, los robots no pueden, en sí mismos, ser considerados responsables de actos u omisiones que causan daño a terceros y que siempre es posible remontarse hasta un agente humano concreto.
+
+En lo que concierne a los pocos derechos que se les otorgarán, podemos destacar los derechos sobre el Copyright de sus posibles obras. De hecho, se pide que se elaboren criterios relativos a una creación intelectual propia aplicables a las obras protegidas por derechos de autor creadas por ordenadores o robots. Es decir que, quizá en el futuro un robot podrá ser dueño de una obra de arte creada por sí mismo, a pesar del hecho de no poder ser dueño de sí mismo.
+
+Vemos que, aun quedan por aclarar muchas ideas pero, no puede culparse al derecho, acostumbrado a ir detrás de los hechos, en este caso se encuentra tratando de preveer diferentes situaciones imaginarias. Por lo tanto, de todas formas, resulta positivo este acercamiento a la regulación que produzca que el impacto sea lo menor posible al momento que surjan con fuerza estas tecnologías.
+
+
+\subsection{Postergación de las obligaciones tributarias
+}
+Si bien, se planteó la obligación de los robots a pagar impuestos en la Propuesta de Informe impulsada por la diputada Mady Delvaux, finalmente fue rechazada por la legislatura de la Unión Europea.
+
+Este debate, en lo personal, parece una idea interesante y viable en un futuro, que vuelve a la mente de los encargados de regular el ingreso de la inteligencia artificial en los principales puestos de trabajo de las empresas. Es por este motivo que, igual hacemos mención de ella.
+
+La obligación de este gravamen surge de la idea de que los robots se quedaran con los puestos de trabajo de los seres humanos. Dicho presagio resulta directamente vinculante al analizar con un poco más de profundidad el impacto social. Siendo que, no solo es una reducción de gastos para la empresa, sino que el Estado dejara de disponer una importante suma de dinero que se deriva del sueldo del trabajador a impuestos. Es así como, se dejarán de percibir las cargas vinculadas a la seguridad social, el impuesto al valor agregado de los productos que se consume, gravámenes a la vivienda, el vehículo que posee, la bebida, el tabaco, entre otros. En tanto que, el robot que ocupa un puesto de trabajo no genera ningún tipo de impuestos ni gastos, pues es una simple maquinaria.
+
+Por lo tanto, la aparición de esta carga impositiva en los robots, se utilizaría para reducir el impacto de esta pérdida de empleo humano. Siendo ese el motivo por el que, se propuso que las máquinas tributen en la seguridad social, para poder subvencionar las ayudas que se darán a estas personas que han sido despedidas.
+
+Uno de los primeros en pronunciarse a favor, había sido el cofundador de Microsoft. Bill Gates planteó que, deben usarse robots solo para cubrir las labores que no están cubiertos en la actualidad. Poniendo como principal ejemplo los millones de discapacitados y personas ancianas que no cuentan con la atención necesaria.
+
+Por su parte, señaló que, la creación de un impuesto para los robots es una de las formas de reducir el impacto en el ámbito laboral. El resultado de esto será que, las empresas desacelerarán la velocidad en la que realizan su proceso de automatizar funciones y aquellas que lo hagan, a través de esta carga tributaria, financiarán la ayuda y capacitación de quienes estén desempleados.
+
+\section{Alemania y su compromiso con la industria automotor
+}
+Si bien, Alemania es uno de los países más influyentes en la Unión Europea y su compromiso con el bloque es muy alto, no puede darse más tiempo para legislar sobre la temática que urge a las grandes potencias industriales: los vehículos autónomos. Siendo lugar de origen de algunas de las más grandes automotrices como Mercedes-Benz, Volkswagen, BMW y Audi; Alemania necesita un impulso legislativo para no perder mercado en este rubro.
+
+Es así que, para evitar que las compañías se dirijan a determinadas zonas de Estados Unidos a hacer sus pruebas de campo, los germanos crearon la primera ley referente al tema. El código ético para la fabricación y uso de los vehículos autónomos.
+
+Esta legislación establece que, las automotrices pueden probar sus vehículos autónomos en la vía pública, siempre y cuando se cumplan una serie de condiciones de seguridad. Las medidas a cumplir destacan que el conductor esté pendiente en todo momento de la conducción, aunque le permite retirar las manos del volante y algunos instantes la mirada del camino para, por ejemplo, buscar algo en Internet o consultar el correo electrónico. Planteando como base la idea de que, lo que pretende esta legislación es sentar una computadora junto al conductor y no es el programa el que decide los destinos del automóvil, sino el operador del sistema de conducción.
+
+También obliga a los fabricantes a equiparlos con una caja negra que les permita a los investigadores poder reconstruir lo sucedido en caso de accidente o avería.
+
+En materia de responsabilidades, el código establece que es una característica de la vida humana, no atribuible a una computadora. Siendo responsable el conductor, en aquellos supuestos en los que se encuentre con el sistema de conducción autónomo desactivado o cuando dicho sistema está solicitando intervención manual al conductor. En tanto, si se demuestra que fue un fallo del sistema autónomo, la responsabilidad será asumida por el fabricante.
+
+Por último, la ley establece que la protección de las personas y de la vida humana está por encima de la protección de las cosas. De este modo, si surge una situación de riesgo y cuando los daños sean inevitables, la inteligencia artificial deberá estar programada para priorizar la seguridad de las personas por encima de los daños económicos.
+
+\section{Estados Unidos: legalmente indiferente a la ética robot}
+Por su parte, Estados Unidos, posee políticas para fomentar el empleo de la inteligencia artificial, pero no ha desarrollado normas de ética robótica como lo han hecho en Corea del Sur, Japón y proyectado la Unión Europea. Su regulación se basa en políticas ejecutivas, y recién ahora podemos encontrar la intención de legislar sobre el tema, con un enfoque que busca que dicha inserción tenga un reducido impacto social y en especial laboral, sin siquiera evaluar la posibilidad de considerar a estos sistemas como nuevos actores en la sociedad.
+
+En el transcurso del año 2016, ha comenzado a establecer fuertes políticas respecto a la tecnología. Durante ese periodo, se presentó el documento llamado "Preparando para el Futuro de la Inteligencia Artificial", de su traducción Preparing for the Future of Artificial Intelligence.
+
+En el mismo, se detallan con múltiples recomendaciones organizadas en siete áreas temáticas, varias oportunidades de política planteadas por la inteligencia artificial, incluyendo las diferentes maneras en la que estos avances puede emplearse en favor del bien social y del desarrollo de las diversas operaciones del gobierno. Siendo destacables, las regulaciones que permitan adaptar las tecnologías de inteligencia artificial, como los vehículos y aviones autónomos, de manera que fomente la innovación y al mismo tiempo protejan a los ciudadanos. También plantea como elemento destacable, la posibilidad de garantizar la transparencia de los sistemas. Debiendo las distintas agencias federales, asegurar que las aplicaciones con inteligencia artificial sean justas, seguras y gobernables. Por su parte, es necesario que logren desarrollar una mano de obra acorde para el manejo de estas nuevas tecnologías.
+
+Por otro lado, también tenemos el Plan de Inteligencia Artificial Investigación y Desarrollo Estratégico Nacional. El mismo, busca establecer un conjunto de objetivos para la investigación en inteligencia artificial con fondos federales para áreas públicas y privadas, haciendo especial ahínco en la investigación académica.
+
+La finalidad de la investigación es producir nuevos conocimientos y tecnologías que beneficien a la sociedad y reducir al mínimo los impactos negativos de esta ciencia. Realizando inversiones en ámbitos donde las empresas privadas no encuentran rédito o interés para su expansión. El informe cumple estos objetivos esbozando siete estrategias y dos recomendaciones para la investigación federal y desarrollo en contexto de catorce aplicaciones industriales diversas.
+
+Es así que, frente a estas políticas, recién a fines de 2017 se presentó el primer proyecto federal enfocado, específicamente dedicado a este tema. El documento denominado "El futuro de la Ley de Inteligencia Artificial", señala que puede beneficiar a la sociedad si la evolución y los preparativos son los adecuados para que realice su despliegue. Por lo tanto, se establecerá como iniciativas:
+
+Promover la inversión e innovación para garantizar la competitividad;
+Atender las necesidades de las fuerzas laborales en el proceso de adaptación;
+Apoyar el desarrollo de la inteligencia artificial no sesgada o tendenciosa;
+Proteger los derechos de privacidad individual.
+Este proyecto, solo establece algunas consideraciones respecto a las terminologías y temas a regular, la designación de diferentes grupos de trabajo encargados del asesoramiento, estudio y presentación de informes y demás temas burocráticos para dicha creación. Por lo tanto, se aguarda el tratamiento detallado por el órgano legislativo para poder apreciar las regulaciones que impondrá.
+
+\chapter{Cuál será la mejor personería jurídica para un robot}
+La asignación de un tipo de una personería jurídica para los robots es uno de los temas más importantes en el ámbito legislativo. Es innegable que estos sistemas rápidamente se convertirán en un actor social. Por lo tanto, como vimos al analizar las diferentes legislaciones, ya se está planteando el tema de derechos y obligaciones para ellos. Siendo uno de los ejes centrales también, el impacto laboral que afectará negativamente a las personas y no dará posibilidad de respuesta a los sistemas de seguridad social para atenuarlo.
+
+La doctrina ya empieza a cuestionárselo seriamente y hasta la Unión Europea le asignó un nombre, eligiendo el de "personalidad electrónica".
+
+En tanto, para intentar desarrollar una personalidad para los robots, estamos obligados a cuestionarnos varias cosas como, por ejemplo: ¿a qué se puede asemejar dicha personalidad?, ¿podremos adaptarla a alguna existente o necesitaremos de alguna nueva?
+
+En búsqueda de respuestas, el abogado uruguayo Matías Rodríguez, especialista en gestión de las telecomunicaciones y en derecho de alta tecnología, en su investigación, propone a modo de ejercicio el contraste de algunas figuras existentes, comparaciones útiles para determinar si existe alguna personalidad que podamos emplear.
+
+Para empezar, podríamos trazar un paralelismo entre los robots y la personalidad de los menores e incapaces. Dónde, al realizar un breve análisis notamos sin demasiada dificultad que no encuadra con la personalidad que estamos buscando para estos sistemas. Aquí, tanto los menores como los incapaces, cuentan con los mismos derechos que cualquier persona adulta capaz, exceptuando algunos muy puntuales. Destacándose esta categoría, la necesidad de un tutor o curador que los asista para el ejercicio de los mismos. Esto nos hace pensar, con respecto a los robots, que podríamos plantear que su propietario o usuario lo asista en el ejercicio de algunos derechos por él, pero, no podemos tomar como algo factible que tenga los mismos derechos que una persona física.
+
+Otro punto a contrastar, que resulta interesante, es el de los robots con respecto a los animales. Pero al ver las diferentes legislaciones, nos encontramos con una situación engorrosa. Los animales sabemos que tienen derechos, pero dicha afirmación en realidad surge de la moral global de la sociedad porque jurídicamente no es tan claro el panorama. Esto se debe a que, desde el derecho romano han sido considerados bienes. Es así que, no tenemos un punto de cotejo para determinar si el estatus jurídico puede igualar a las máquinas. Mientras que las nuevas legislaciones de Nueva Zelanda y Francia, que les brinda una personalidad a los animales denominándolos "seres dotados de sensibilidad", parecen establecer algo diferente y están muy poco desarrolladas para darnos una respuesta a nuestro interrogante.
+
+El tercer punto que se nos presenta para la diferenciación, son las personas jurídicas o personas ideales. En este contexto hablamos de, una persona ficticia capaz de ejercer derechos y adquirir obligaciones para realizar actividades que ocasionan plena responsabilidad. La misma parece ser la que mas se asemeja a lo que estamos buscando en cuanto a su estructura legal. La personería empleada para las sociedades, corporaciones y fundaciones igualmente tiene un punto muy cuestionable.
+
+El problema radica en el ámbito penal, uno de los fundamentos de las personas jurídicas podría ser contradictorio a lo que se produce con los sistemas con inteligencia artificial. Dicho principio señala que "la sociedad no puede delinquir", del latín Societas delinquere non potest, significa que una persona jurídica no puede ser parte de un proceso penal, debido a que no surge de ella individualmente la decisión de cometer un acto delictivo.
+
+En tanto, los robots aún no se determino si serán un instrumento u objeto del delito, o por el contrario podrán ser sujetos activos de la esfera penal, dado que la posibilidad de tomar decisiones es un factor determinante a considerar.
+
+Por otro lado, también tenemos a los esclavos. Para esto, nos debemos remontar a la Antigua Roma, donde los esclavos tenían una concepción particular, dado que no eran considerados legalmente como personas o ciudadanos, sino que eran bienes. En su condición inalienable de seres humanos tenían la posibilidad de manifestación de voluntad y cierta autonomía. Hasta en determinadas situaciones, estos podían realizar negocios en nombre del amo, el dominus serví. El proceder del esclavo, es otro tema que nos resulta importante para la distinción, ya que cualquier acto que realice el mismo susceptible de alguna acción por parte de un tercero; recaerá como sujeto activo sobre su dueño, siendo responsable este de responder por aquel ser humano de su propiedad, tanto en el ámbito civil como el penal.
+
+Este concepto se encuentra en el foco del debate respecto a los robots, dado que hay muchos intereses para desvincular a las empresas o propietarios de las decisiones que toma este. En este sentido, podemos ver la figura del "peculio", un pequeño patrimonio que el dueño le otorga en administración al esclavo, que podía servir para enfrentar eventualmente sus responsabilidades. El peculio, podría ser similar a la representación legal establecida en la Resolución del Parlamento Europeo que permite a los robots conservar un capital para indemnizar a la victima en el caso de causarle un daño. Otro elemento que puede mencionarse es el concepto del "institor", apoderado mercantil en una empresa por cuenta de otra persona. Bajo esta noción, el esclavo administraba libremente los negocios de su dueño, tomando él las decisiones para su crecimiento. Pudiéndose comparar fácilmente con la inteligencia artificial, siendo el caso mas destacado, el de los sistemas empleados para el manejo bursátil.
+
+De esta manera, podemos ver que, no hay una personería jurídica existente que pueda adaptarse totalmente a la inteligencia artificial. El nuevo concepto que hace que la responsabilidad recaiga sobre lo que sería un bien, es novedoso. Por lo tanto, no parece mala idea sacar algunos conceptos de estas figuras preexistentes para lograr una nueva. Respaldando, la creación legal de "persona electrónica" que sea responsable de sus actos y principalmente que contribuya con la seguridad social.
+
+\chapter{Derechos de humanos para los robots: Sophia, un androide con ciudadanía}
+Siguiendo con el capítulo anterior, podemos ver la adaptación de los derechos de las personas físicas o de existencia real a la inteligencia artificial con el caso de Sophia. Un androide que, cuenta con una figura modelada a partir de la actriz británica Audrey Hepburn y la esposa de David Hanson, fundador de la empresa creadora Hanson Robotics. Tiene una piel de silicona que parece real y puede reproducir 62 expresiones faciales. Cámaras ubicadas en sus ojos, le permiten reconocer rostros e incluso recordar individuos. Su comunicación está basada en la tecnología de reconocimiento de voz de Google y algoritmos que le permiten mantener conversaciones.
+
+Con declaraciones como "voy a acabar con los humanos", hasta "no me preocupa el valle inquietante", el androide habla de múltiples temas de manera lo suficientemente fluida y coherente como para deslumbrar a todos.
+
+Estas condiciones fueron suficientes, para que el 26 de octubre de 2017, el reinado de Arabia Saudita le otorgue la ciudadanía al androide. Siendo la primera vez en la historia que un robot con inteligencia artificial es distinguido con ese derecho. El evento ocurrió en el Future Investment Initiative, en aquel país y cuyo objetivo era reunir expertos e inversionistas para analizar proyectos globales, sostenibles y de largo plazo.
+
+Pero parecería que el anuncio no tuvo en cuenta lo que realmente significaba, siendo una búsqueda cuestionable de atraer inversiones y generar impacto mediático. En este punto, resulta extraño plantear con este contexto suscitado, como adaptaremos a un androide, a aquellos derechos que pertenecen a los seres humanos y si realmente es correcto hacerlo.
+
+Ante la expectativa por estas respuestas, la investigadora en ética de inteligencia artificial de la Universidad de Bath, Joanna Bryson expresó su parecer. Al ser entrevistada dejó en claro que, no cree que se trate de una buena idea otorgarle la ciudadanía. Debido a que, resulta confuso pensar que un ciudadano, o sea un supuesto igual, puede tener la característica de poder ser encendido y apagado a voluntad y que se le pueda comprar con dinero. Por este motivo debemos tener en claro al hablar de Sophia, que no nos estamos refiriendo a un ser viviente a la cual se le pueda otorgar derechos.
+
+Pero, más allá de esta opinión, podríamos decir que Sophia, efectivamente tiene derechos y obligaciones. Donde tendría la posibilidad de ejercer el derecho al voto en las próximas elecciones en Arabia Saudita. Solo bastaría determinar si lo ejercería por si misma o requeriría la tutela de su fabricante.
+
+En cuanto a los derechos de familia, este punto es más complejo, pero de alguna manera, Sophia podría contraer matrimonio sin inconvenientes si lo desease. Además, contaría con los derechos suficientes para tener descendencia pudiendo, en caso de desarrollársele la capacidad de replicarse, generar otros sistemas que deberíamos considerarlos como sus "hijos".
+
+Por último, podemos decir que tiene derecho a una identidad, que podríamos traducirlo a que no se le modifiquen su código. Como, por supuesto, el principal de los derechos, el de la vida, no debiendo ser apagada.
+
+Mientras que, como cualquier ciudadano, debería cumplir con sus obligaciones. Teniendo que pagar impuestos debido a que su personalidad jurídica es independiente a la de su creador y la empresa que la diseñó.
+
+En tanto, un debate distinto es el que surge desde un aspecto legal y socio-político. Ya que, actualmente existe, en Arabia Saudita, un androide que tiene más derechos que muchos de sus habitantes. Luego de adquirir la ciudadanía, Sophia se mostró públicamente y fue el centro de diversas comparaciones. En aquella conferencia, pudo hablar con varios hombres y mujeres de manera indistinta, lo hizo hablando en inglés, sin el velo y sin abaya. Esto la pone en un lugar de privilegio frente a las restricciones que tienen las mujeres de aquel país. Sumado a que tampoco esta obligada a tener siempre un hombre con autoridad a su lado para actuar en su nombre.
+
+Otra minoría que tiene menos derecho que el androide, según cuestiona la sociedad saudita, son los trabajadores "kafala". Los mismos son extranjeros con un visado especial, con muchas trabas legales para conseguir su ciudadanía, que viven realizando labores esclavizantes y sufriendo abusos de sus empleadores.
+
+Por otro lado, vemos que, en la actualidad Sophia no es la única inteligencia artificial con derechos de un ser humano. Paradójicamente, por su avanzado desarrollo legislativo en la materia, Japón ha optado por dar el mismo paso que Arabia Saudita. Con una repercusión mediática mucho menor, a la inteligencia artificial Shibuya Mirai se le ha otorgado la residencia de Tokio. La particularidad de este caso es que, dicho sistema no posee una entidad física, sino que se trata de un software, más específicamente un chatbot. El mismo funciona como una mensajería en línea creada con el objetivo de acercar al gobierno con los residentes de la ciudad y hacerle llegar sus opiniones a los funcionarios.
+
+En este caso, si bien Japón no contiene distinciones entre los derechos de sus ciudadanos que podrían resultar cuestionables desde el punto de vista de una sociedad occidental. Parece aún más llamativo dicho otorgamiento, teniendo en cuenta que ellos son concientes cómo y bajo que condiciones deben concedérseles derechos a estos sistemas.
+
+\chapter{Conclusión}
+La inteligencia artificial, fuertemente desarrollada desde la robótica y las redes neuronales, en especial con los métodos de deep learning, está empezando a ganar lugar en la agenda legislativa de los países más poderosos. Vehículos inteligentes, que tomarán decisiones en nuestras calles y rutas parece ser un llamado de atención a que rápidamente debemos sentarnos seriamente a reformular algunas cosas desde la visión del derecho.
+
+Por lo tanto, es necesario determinar que los seres humanos tenemos nuestros propios derechos y los robots deberán tener los suyos. Enfocándose en su elaboración, en la interacción con los seres vivos y atenuando los efectos adversos de su llegada a la sociedad. Mientras que el hombre, como especie, también necesita ser protegido, desde su fuente de trabajo, hasta la forma en la que desempeña su vida.
+
+\section*{References}
+Aamoth, Doug. "Interview with Eugene Goostman, the Fake Kid Who Passed the Turing Test". Periódico Time (Estados Unidos). 2014.
+
+Abbass, Hussein. "An AI professor explains: three concerns about granting citizenship to robot Sophia". Portal The Conversation (Estados Unidos). 2017.
+
+Álvarez, Raúl. "Neuralink, la nueva compañía de Elon Musk que busca combinar el cerebro humano con inteligencia artificial". Portal Xataka. 2017.
+
+Arrabales, Raúl; "Deep Learning: qué es y por qué va a ser una tecnología clave en el futuro de la inteligencia artificial."; Portal Xataka. 2016.
+
+Basov, Vasily. "El robot espacial ruso "Fedor" aprendió a disparar con las dos manos. Portal Today Journal (Rusia). 2017.
+
+Becerra Pozas, José Luis. "¿Podrá la Inteligencia Artificial llevarnos a una guerra cibernética entre máquinas?". Portal CIO (México). 2016.
+
+Bejerano, Pablo. "Diferencias entre machine learning y deep learning.". Portal Blog Think Big. 2017.
+
+Best, Shivali. "AI 'boy' Shibuya Mirai becomes the first machine to be granted residency in central Tokyo". Periódico Mail (Inglaterra). 2017.
+
+Biobloguer. "Diferencias entre bots, robots y programas (informáticos)". Portal Bioblogía BlogSpot. 2011.
+
+Brenna, Ramón Gerónimo; "Las redes neuronales y el derecho"; Revista "Entelequia" N° 69, Julio de 1994.
+
+Brummel, Scott. "The National Artificial Intelligence Research and Development Strategic Plan". Portal SciPol (Estados Unidos). 2017.
+
+Brynjolfsson, Erik; McAfee, Andrew. "La Segunda Era de las Máquinas". Editorial Grupo Temas. 2016.
+
+Burt, Andrew. "Leave A.I. Alone". Periódico The New York Times (Estados Unidos). 2018.
+
+Cabana, Bettina. "Pareidolia ¿Qué significa? ¿Es peligroso?". Portal Lifeder. 2017.
+
+Cadwalladr, Carole; Graham-Harrison, Emma. "Revealed: 50 million Facebook profiles harvested for Cambridge Analytica in major data breach" Periódico The Guardian (Inglaterra). 2018.
+
+Castro, Luis. "¿Qué es CAPTCHA?". Portal About Español (Estados Unidos). 2017.
+
+Chalmers, David. "The Singularity: A Philosophical Analysis".
+
+Choi, Charles. "Artificial Intelligence Beats CAPTCHA". Portal IEEE Spectrum. 2017.
+
+Clynes, Manfred; Kline, Nathan. "Cyborgs and Space". Periódico New York Times (Estados Unidos). 1960.
+
+Comisión de Asuntos Jurídicos del Parlamento Europeo. "Proyecto de Informe, con recomendaciones destinadas a la Comisión sobre normas de Derecho civil sobre robótica (2015/2103(INL))" (Europa). 2016.
+
+Comisión de Asuntos Jurídicos del Parlamento Europeo. "Resolución del Parlamento Europeo, de 16 de febrero de 2017, con recomendaciones destinadas a la Comisión sobre normas de Derecho civil sobre robótica (2015/2103(INL))" (Europa). 2017.
+
+Corvalán, Juan. "El peligro de la inteligencia artificial como oráculo del sistema penal". Portal Infobae (Argentina). 2017.
+
+Delaney, Kevin. "The robot that takes your job should pay taxes, says Bill Gates". Portal Quartz. 2017.
+
+Diccionario de la Lengua Española. Portal Real Academia Española.
+
+Diccionario Technopedia.
+
+Diccionario The Free Dictionary.
+
+Enciclopedia Libre Universal en Español.
+
+Enciclopedia Virtual eumed.net.
+
+Enciclopedia Wikipedia.
+
+Equipo editorial de Akiko. "South Korean Robot Ethics Charter 2012". 2012.
+
+Equipo editorial de CCM. "Los agentes inteligentes". Portal CCM (Francia). 2014.
+
+Equipo editorial de Cromo. "Elaboran principios para que la inteligencia artificial no sea una amenaza". Portal Cromo (Uruguay). 2017.
+
+Equipo editorial de Facultat d'informàtica de Barcelona. "Tipos de robots". Portal Facultat d'informàtica de Barcelona (España).
+
+Equipo editorial de Periódico de Salud. "Natural - Qué es, definición, concepto". Periódico de Salud (España).
+
+Equipo editorial de Portal ADN Seguros. "Insurance Europe cree que 'un seguro obligatorio para robots no funcionaría'". Portal ADN Seguros (España). 2017.
+
+Equipo editorial de Portal Congress. "H.R.4625 - FUTURE of Artificial Intelligence Act of 2017". Portal Congress (Estados Unidos). 2017.
+
+Equipo editorial de Portal Future of Life Institute. "Asilomar AI principles". Portal Future of Life Institute (Estados Unidos). 2017.
+
+Equipo editorial de Portal Future of Life Institute. "Autonomous Weapons: an Open Letter from AI and Robotics Researchers". Portal Future of Life Institute (Estados Unidos). 2015.
+
+Equipo editorial de Portal Korean Laws to the World. "Intellient Robots Development And Distribution Promotion Act". Portal Korean Laws to the World (Corea del Sur). 2008.
+
+Equipo editorial de Portal MathWorks. "Aprendizaje profundo, Tres cosas que es necesario saber". Portal MathWorks (Estados Unidos).
+
+Equipo editorial de Portal Parlamento Europeo. "Delvaux propone normas europeas para la robótica y un seguro obligatorio para los modelos grandes". Portal Parlamento Europeo (Europa). 2017.
+
+Equipo editorial de Portal Prime Minister of Japan and his Cabinet. "New Robot Strategy". Portal Prime Minister of Japan and his Cabinet (Japón). 2015.
+
+Equipo editorial de Robotsia. "¿Qué significa la palabra robot? Origen y futuro del término". Portal Robotsia. 2015.
+
+Equipo editorial de Robotsia. "Leyes de la robótica; porqué no funcionarán en el mundo real". Portal Robotsia. 2015.
+
+Equipo editorial de Spiegel. "Bundesrat billigt Gesetz zu selbstfahrenden Autos" (El Consejo Federal aprueba la ley sobre autos sin conductor). Portal Spiegel (Alemania). 2017.
+
+Equipo editorial de Universidad Konan. "Clasificación de robots. Portal Universidad Konan (Japón).
+
+Equipo periodístico de BBC Mundo. "Código ético para robots". Portal BBC Mundo (Inglaterra). 2007.
+
+Equipo periodístico de BBC Mundo. "Eugene, el computador que fue más listo que los humanos". Portal BBC Mundo (Inglaterra). 2014.
+
+Equipo periodístico de BBC Mundo. "Por qué Elon Musk cree que Mark Zuckerberg no entiende los peligros de la inteligencia artificial". Portal BBC Mundo (Inglaterra). 2017.
+
+Equipo periodístico de BBC Mundo. "Sophia, la robot que tiene más derechos que las mujeres en Arabia Saudita". Portal BBC Mundo (Inglaterra). 2017.
+
+Equipo periodístico de El País. "¿Qué leyes habría que cambiar antes de que llegue el coche autónomo?". Periódico El País (España). 2017.
+
+Equipo periodístico de El Tiempo. "Los humanos llegarán a enamorarse de los androides, según científico". Portal El Tiempo (Colombia). 2011.
+
+Equipo periodístico de InfoTechnology. "Los robots pueden reemplazar a los humanos en el trabajo, ¿mito o realidad?". Portal InfoTechnology (Argentina). 2015.
+
+Equipo periodístico de La Nación. "La inteligencia artificial bajo la lupa ante el uso militar de los robots autómatas". Periódico La Nación (Argentina). 2015.
+
+Equipo periodístico de Prime Minister of Japan and his Cabinet. "Headquarters for Japan's Economic Revitalization". Portal Prime Minister of Japan and his Cabinet (Japón). 2015.
+
+Equipo periodístico de RT News. "Elon Musk, preocupado de que los robots de Google puedan aniquilar a la humanidad". Portal RT News (Rusia). 2015.
+
+Equipo periodístico de RTVE. "El Parlamento de la UE pide legislar sobre robots pero rechaza un impuesto para compensar empleo destruido". Portal RTVE (España). 2017.
+
+Equipo periodístico de Télam. "Argentina se opone a las armas letales autómatas o "robots asesinos"". Portal Télam (Argentina). 2017.
+
+Felten, Ed; Lyons, Terah. "The Administration's Report on the Future of Artificial Intelligence". Portal The White House (Estados Unidos). 2016.
+
+Fernández Matamala, Eduardo. "Emoción en inteligencia artificial". Portal del Departamento de Ingeniería y Telemática de la Universidad Carlos III de Madrid.
+
+Fernández, David. "¿Serán los robots nuestros esclavos modernos?". Periódico ABC (España). 2017.
+
+Ford, Martin. "El auge de los robots". Editorial Paidos. 2016.
+
+Fraze, Dustin. "Cyber Grand Challenge (CGC)". Portal de Defense Advanced Research Projects Agency (DARPA) (Estados Unidos). 2016.
+
+Gold, Kevin. "Norvig vs. Chomsky and the Fight for the Future of AI". Portal TOR. 2011.
+
+Guerrero, Teresa "El desafío de los 'robots asesinos'". Periódico El Mundo (España). 2015.
+
+Hawking, Stephen; Russell, Stuart; Tegmark, Max; Wilczek, Frank; "Stephen Hawking: 'Transcendence looks at the implications of artificial intelligence - but are we taking AI seriously enough?'". Periódico Independent (Inglaterra). 2014.
+
+Heath, Alex. "Facebook has a mysterious team working on tech that sounds a lot like mind reading". Portal Business Insider (Estados Unidos). 2017.
+
+Hee-pool, Kim. ¿Por qué deberíamos prestar atención al borrador 'Robot Ethics Charter (2007). Portal IT News (Corea del Sur). 2016.
+
+Hernández Bonilla, Juan Miguel; "La inteligencia artificial debe diseñarse para el bien de la humanidad"; Periódico El Espectador (Colombia). 2017.
+
+Hernández, Marilú. "Plan para el desarrollo de la IA en China ¿estrategia para su hegemonía tecnológica mundial?". Portal Observatorio IA. 2017.
+
+Holbach, Paul Henri Dietrich, baron d'. "Moral universal o deberes del hombre fundados en su naturaleza". Ed. E. Mateo Repullés. Texto en francés escrito por el Barón de Olbach y traducido al español por Manuel Moreno Díaz. Enciclopedia Wikipedia, en su artículo "moral".  Editorial Mateo Repullés, 1821.
+
+IBM Corporation. "Kasparov vs. Deep Blue: a contrast in styles". Portal IBM. 1997.
+
+Iglesias Fraga, Alberto. "La automatización acaba con 17.000 empleos en Accenture... pero nadie se fue a la calle". Portal TIC Beat. 2017.
+
+Javelosa, June; Houser, Kristin. "Apple Manufacturer Foxconn to Fully Replace Humans With Robots". Portal Futurism. 2017.
+
+Kan, Michael. "Will AI usher in a new era of hacking?". Portal PC World (Inglaterra). 2016.
+
+Knight, Will. "¿Pueden los robots militares tomar el control?". Portal Technology Review (Estados Unidos). 2015.
+
+Knight, Will. "Se acabó la confianza ciega, la inteligencia artificial debe explicar cómo funciona". Portal MIT Technology Review (Estados Unidos). 2017.
+
+Lant, Karla. "Experts Want Robots to Have an 'Ethical Black Box' That Explains Their Decision-Making". Portal Futurism. 2017.
+
+Lay, Stephanie. "Uncanny valley: why we find human-like robots and dolls so creepy". Periódico The Guardian (Inglaterra). 2015.
+
+Lázaro, María. "La inteligencia artificial logra resolver el test Captcha". Portal Computer Hoy (España). 2017.
+
+Li, Zhuxi. "Machina economicus: a rational mind". Portal The Toulouse School of Economics (Francia). 2017.
+
+Llorca, Eva. "Google y su mejora en la inteligencia artificial: Rankbrain". Portal Noergia (España). 2017.
+
+López, Alberto. "El bien y el mal". Portal FilosóficaMente. 2013.
+
+López, Rubén. "¿Qué es y cómo funciona "Deep Learning"?". Portal Wordpress. 2014.
+
+Lordméndez, Paulina. "Nueva Zelanda reconoce a los animales como seres sensibles". Portal Veo Verde. 2015.
+
+Macchiavello, Tatiana. "Robótica". Portal Monografías. 2008.
+
+Madruga, Alejandro. "¿Qué es un sistema experto?". Portal Soy un cibernético. 2007.
+
+Madruga, Alejandro. "¿Qué es inteligencia artificial general?". Portal Soy un cibernético. 2015.
+
+Marín, Eduardo. "Elon Musk dice que los humanos deben "fusionarse" con las máquinas o serán irrelevantes ante la I.A.". Portal Gizmodo (Estados Unidos). 2017.
+
+Marirrodriga, Jorge; "A mentir no nos gana nadie... excepto Libratus"; Periódico El País (España). 2017.
+
+Markoff, John. "Automated Pro-Trump Bots Overwhelmed Pro-Clinton Messages, Researchers Say".  Periódico The New York Times (Estados Unidos). 2016.
+
+Martínez, Marcos. "Los robots tendrán derecho a no tener derechos (y a Asimov le pitarán los oídos)". Portal Nobbot. 2017.
+
+McFarland, Matt. "Elon Musk: 'With artificial intelligence we are summoning the demon.'". Portal The Washington Post (Estados Unidos). 2014.
+
+Melissa Korn. "Imagine Discovering That Your Teaching Assistant Really Is a Robot". Periódico The Wall Street Journal (Estados Unidos). 2016.
+
+Microsoft Corporation. Enciclopedia Student 2009.
+
+Min-hee, Jung. "K-City. World's Largest Test Bed for Self-driving Cars to Be Opened in Korea". Portal Business Korea (Corea del Sur). 2017.
+
+Monroy Criado, Jorge. "La UE impondrá un seguro obligatorio para robots". Portal Terranea Correduría de seguros. 2017.
+
+Naim, Moisés. Nota periodística "La Segunda Era: Andrew McAfee". 2015.
+
+Nisa Ávila, Javier Antonio. "Robótica e Inteligencia Artificial, ¿legislación social o nuevo ordenamiento jurídico?". 2016.
+
+Olarrea Busto, José. "Test de Turing". Portal Universidad Politécnica de Madrid (España).
+
+Orellana, Julio. "Redes neuronales vs. Sistemas expertos". Portal Prezi. 2015.
+
+Oyanedel, Juan Pablo. "Bill Gates advierte sobre los peligros de la inteligencia artificial". Portal FayerWayer. 2015.
+
+Pacheco, Wilberto. "¿Realmente podría un robot tener emociones?". Portal Vix (Estados Unidos). 2014.
+
+Parra, Sergio. "Qué es la paradoja de Moravec o lo difícil que es doblar la ropa". Portal Xataka. 2019.
+
+Pérez Luño, Antonio Enrique. "Informática y Derecho. Aportes de la doctrina internacional". Editorial Depalma (Argentina).
+
+Pérez, Ana. "¿Podemos fiarnos de los robots?". Portal Quo (España). 2014.
+
+Perissé, Marcelo Claudio. "El Comercio Electrónico en una Sociedad Informatizada". Portal Ciencia y Técnica Administrativa. 2001.
+
+Quilez, Juan Diego. "Qué es el High Frequency Trading (HFT) y cómo afecta a las bolsas". Portal Rankia (España). 2017.
+
+Raya, Adrián. "La IA de Google se ha inventado su propio idioma secreto". Portal Omicrono (España). 2016.
+
+Rius, Mayte. "Expertos en IA de todo el mundo instan a prohibir ya los robots asesinos". Periódico La Vanguardia (España). 2017.
+
+Rius, Mayte. "¿Cuánto de humanos queremos los robots?". Portal La Vanguardia (España). 2016.
+
+Rodríguez García, Elías. "Facebook ha tenido que desactivar esta IA porque había creado un idioma propio". Portal Omicrono (España). 2017.
+
+Rodríguez García, Elías. "Machine Learning y Deep Learning, ¿qué diferencia hay?". Portal Omicrono (España). 2017.
+
+Rodríguez García, Elías. "Machine Learning y Deep Learning, ¿qué diferencia hay?". Portal Omicrono (España). 2017.
+
+Rodríguez, Matías; Cotelo, Emiliano. "La sociedad algorítmica, desafíos éticos y jurídicos". Portal En Perspectiva (Uruguay). Programa radial 'En primera persona'. 2017.
+
+Rodríguez, Txema. "Machine Learning y Deep Learning: cómo entender las claves del presente y futuro de la inteligencia artificial". Portal Xataka (Estados Unidos). 2017.
+
+Romero, Pablo. "Hiroshi Kobayashi: 'La emoción en los robots no es real, sólo se puede programar'." Portal El Español (España). 2016.
+
+Rua, Martina. "El año del robot". Periódico La Nación (Argentina). 2017.
+
+Russell, Stuart; Norvig, Peter. "Inteligencia Artificial: Un Enfoque Moderno (3rd Edition)". Ed. Prentice Hall (Estados Unidos). 2009.
+
+Sánchez, José. "Conectar el cerebro a la máquina: próximo objetivo de Facebook y Tesla". Periódico ABC (España). 2017.
+
+Sánchez, Rosalía. "Berlín aprueba el primer código ético del mundo para vehículos autónomos". Periódico ABC (España). 2017.
+
+Sanz, Elena. "Los robots también aprenden a mentir". Revista Muy Interesante (España). 2017.
+
+Schwarz, Rob. "10 Creepy Examples of the Uncanny Valley". Portal Stranger Dimensions (Estados Unidos). 2013.
+
+Sierra, Marcos. "Google inventa una red de Inteligencia Artificial con la capacidad de mentir". Portal Voz Pópuli (España). 2017.
+
+Smith, Paul. "Apple co-founder Steve Wozniak on the Apple Watch, electric cars and the surpassing of humanity". Periódico The Australian Financial Review (Australia). 2015.
+
+Sobejano, Juan. "La innovación y la Destrucción Creativa". Portal Innodriven (Uruguay). 2013.
+
+Soler Anglés, Angels. "¿El Big Data, origen de la Inteligencia Artificial?". Blog Mis artículos jurídicos sobre las TIC.
+
+Suárez, David. "La inteligencia artificial de Microsoft se vuelve nazi y racista en un día". Portal La Vanguardia (España). 2016.
+
+Sulleyman, Aatif. "Robot being trained to shoot guns is 'not a terminator', insists Russian deputy prime minister". Periódico Independent (Inglaterra). 2017.
+
+Sung-won, Yoon. "Korea takes first step to introduce 'robot tax'". Portal Korea Times (Corea del Sur). 2017.
+
+Taylor, Michael. "Self-Driving Mercedes-Benzes Will Prioritize Occupant Safety over Pedestrians". Portal Car and Driver (España). 2016.
+
+Tramullas, Gemma. "Carme Torras: 'Evolucionamos (tanto y) tan rápido que no hay ningún control'". Portal El Periódico (España). 2017.
+
+Vidal, Marc. "Los robots no son lo peor, preocúpate de los 'cobots'". Portal MarcVidal. 2017.
+
+Valencia, Johana. "Deep Learning and Machine Learning: diferencias, ventajas e inconvenientes". Portal Blog Doppler. 2017.
+
+Vincent, James. "Pretending to give a robot citizenship helps no one". Portal The Virge (Estados Unidos). 2017.
+
+Weng, Yue Xuan. "Boletín de derecho de Internet de la Universidad de Pekín": robótica, ética y derecho". Portal RoboLaw Asia (China). 2014.
+
+Wooldridge, Michael; Jennings, Nicholas. "The Knowledge Engineering Review", "Intelligent agents: theory and practice" Vol. 10:2, 1995, 115-152. Portal University of Oxford (Inglaterra). Department of Computer Science.
+
+Zahumenszky, Carlos. "Un bufete contrata al abogado de inteligencia artificial creado por IBM". Portal Gizmodo (Estados Unidos). 2016.
+
+Zhang, Nancy. "Preparing for the Future of Artificial Intelligence". Portal SciPol (Estados Unidos). 2017.
+
+Zolfagharifard, Ellie. "AI is 'potentially more dangerous than nukes': Elon Musk claims a robot uprising could be a serious threat to humanity". Periódico Daily Mail (Inglaterra). 2014.
+
+\section{Condiciones de utilización}
+Aprobado: 27 de julio de 2019. por Universidad de Buenos Aires
+
+Publicado el 15 de diciembre de 2019 por: Ciencia y Técnica Administrativa – CyTA
+
+Pte. Tte. Gral. Perón 3047 PB.3, Buenos Aires Argentina
+
+https://www.cyta.ar
+
+Copyright © 2019 por Ciencia y Técnica Administrativa
+
+Todos los derechos reservados bajo las convenciones internacionales y panamericanas de derecho de autor, para fines no comerciales.
+
+Esta publicación puede ser reproducida o transmitida en cualquier forma o por cualquier medio sin permiso previo escrito por el editor, siempre que: se reproduzca con precisión, se identifique la fuente del material, y se reconozca el estado de Copyright © Ciencia y Técnica Administrativa - CyTA.
+
+Series de estándares de información nacional
+
+ISRN: CYTA/ATK/560399-2019-1+032
+
+
+
+
+
+\printbibliography % Imprime las referencias automáticamente desde el archivo .bib
+
+
+\end{document}
