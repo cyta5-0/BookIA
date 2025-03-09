@@ -1,0 +1,1 @@
+https://www.cyta.com.ar/oai/rdf_sparql_monograph/sparql.php?query=SELECT+%3Ftitle+%3Fdate+WHERE+%7B+%3Fbook+a+%3Chttps%3A%2F%2Fschema.org%2FBook%3E+%3B+%3Chttps%3A%2F%2Fschema.org%2Fname%3E+%3Ftitle+.%7D
