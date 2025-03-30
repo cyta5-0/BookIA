@@ -2,7 +2,7 @@
 // Conexión a MySQL
 // Encabezados para UTF-8
 
-$conn = new mysqli("127.0.0.1", "marcelop_uv0055", "peron3047", "marcelop_bookia");
+$conn = new mysqli(" ", " ", " ", "marcelop_bookia");
 
 // Verificar conexión
 if ($conn->connect_error) {
