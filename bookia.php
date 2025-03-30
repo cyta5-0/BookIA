@@ -1,5 +1,5 @@
 <?php
- $conexion = mysqli_connect('127.0.0.1', 'marcelop_uv0055', 'peron3047');
+ $conexion = mysqli_connect(' ', ' ', ' ');
 mysqli_select_db ($conexion, 'marcelop_bookia');
 mysqli_set_charset($conexion, 'utf8');
 ?>
