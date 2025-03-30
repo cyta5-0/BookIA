@@ -8,12 +8,13 @@ https://www.cyta.com.ar/cybercyta/sparql.php?query=SELECT%20?title%20?date%20WHE
 https://www.cyta.com.ar/cybercyta/sparql.php?query=SELECT%20?title%20?date%20WHERE%20{%20?article%20schema:datePublished%20%222001-09-15%22%20}
 
 https://www.cyta.com.ar/cybercyta/sparql.php?query=SELECT ?title ?creator_1 WHERE { ?article schema:author "Perissé, Marcelo Claudio" }
+https://www.cyta.com.ar/cybercyta/sparql.php?query=SELECT ?title ?author ?date ?url WHERE  ? article; dcterms:title ? title ; dcterms:creator ?author ; dcterms:date ?date ; dcterms:identifier ?url . } ORDER BY DESC(?date)
  */
 
 header('Content-Type: text/turtle'); // Definimos el tipo de contenido RDF/Turtle
 
 // Conexión a la base de datos
-$conexion = new mysqli("127.0.0.1", "marcelop_uv0055", "peron3047", "marcelop_bookia");
+$conexion = new mysqli(" ", " ", " ", " ");
 
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
