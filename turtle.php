@@ -2,7 +2,7 @@
 header('Content-Type: text/turtle'); // Definimos el tipo de contenido RDF/Turtle
 
 // Conexión a la base de datos
-$conexion = new mysqli("127.0.0.1", "marcelop_uv0055", "peron3047", "marcelop_bookia");
+$conexion = new mysqli(" ", "m ", "  ", "marcelop_bookia");
 
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
